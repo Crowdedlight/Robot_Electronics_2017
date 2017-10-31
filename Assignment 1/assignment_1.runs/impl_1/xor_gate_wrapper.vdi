@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Sep 12 14:45:36 2017
+# Process ID: 24202
+# Current directory: /home/frederik/Documents/Rob Electronics/Assignment 1/assignment_1.runs/impl_1
+# Command line: vivado -log xor_gate_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source xor_gate_wrapper.tcl -notrace
+# Log file: /home/frederik/Documents/Rob Electronics/Assignment 1/assignment_1.runs/impl_1/xor_gate_wrapper.vdi
+# Journal file: /home/frederik/Documents/Rob Electronics/Assignment 1/assignment_1.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source xor_gate_wrapper.tcl -notrace
+Command: open_checkpoint xor_gate_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1083.051 ; gain = 0.000 ; free physical = 557 ; free virtual = 3067
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z010clg225-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/frederik/Documents/Rob Electronics/Assignment 1/assignment_1.runs/impl_1/.Xil/Vivado-24202-mazur-W55xEU/dcp3/xor_gate_wrapper_early.xdc]
+Finished Parsing XDC File [/home/frederik/Documents/Rob Electronics/Assignment 1/assignment_1.runs/impl_1/.Xil/Vivado-24202-mazur-W55xEU/dcp3/xor_gate_wrapper_early.xdc]
+Parsing XDC File [/home/frederik/Documents/Rob Electronics/Assignment 1/assignment_1.runs/impl_1/.Xil/Vivado-24202-mazur-W55xEU/dcp3/xor_gate_wrapper.xdc]
+Finished Parsing XDC File [/home/frederik/Documents/Rob Electronics/Assignment 1/assignment_1.runs/impl_1/.Xil/Vivado-24202-mazur-W55xEU/dcp3/xor_gate_wrapper.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1324.211 ; gain = 0.000 ; free physical = 271 ; free virtual = 2816
+Restored from archive | CPU: 0.180000 secs | Memory: 0.079933 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1324.211 ; gain = 0.000 ; free physical = 271 ; free virtual = 2816
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2017.2 (64-bit) build 1909853
+open_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1324.211 ; gain = 241.160 ; free physical = 273 ; free virtual = 2816
+Command: write_bitstream -force xor_gate_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010-clg225'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010-clg225'
+Running DRC as a precondition to command write_bitstream
+Command: report_drc (run_mandatory_drcs) for: bitstream_checks
+INFO: [DRC 23-27] Running DRC with 4 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./xor_gate_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] '/home/frederik/Documents/Rob Electronics/Assignment 1/assignment_1.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue Sep 12 14:46:09 2017. For additional details about this file, please refer to the WebTalk help file at /home/frederik/Vivado/Vivado/2017.2/doc/webtalk_introduction.html.
+16 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1764.641 ; gain = 440.430 ; free physical = 561 ; free virtual = 2793
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 12 14:46:09 2017...

@@ -1,0 +1,361 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Oct 31 14:35:55 2017
+# Process ID: 1636
+# Current directory: /home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_duty_module_0_0_synth_1
+# Command line: vivado -log design_1_duty_module_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_duty_module_0_0.tcl
+# Log file: /home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_duty_module_0_0_synth_1/design_1_duty_module_0_0.vds
+# Journal file: /home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_duty_module_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_duty_module_0_0.tcl -notrace
+Command: synth_design -top design_1_duty_module_0_0 -part xc7z010clg225-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg225'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg225'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1659 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1155.637 ; gain = 57.992 ; free physical = 130 ; free virtual = 2102
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_duty_module_0_0' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ip/design_1_duty_module_0_0/synth/design_1_duty_module_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'duty_module' declared at '/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_module.vhd:34' bound to instance 'U0' of component 'duty_module' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ip/design_1_duty_module_0_0/synth/design_1_duty_module_0_0.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'duty_module' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_module.vhd:41]
+INFO: [Synth 8-3491] module 'debounce' declared at '/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:11' bound to instance 'debounce_btn1' of component 'debounce' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_module.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'debounce' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:22]
+WARNING: [Synth 8-614] signal 'delay_in' is read in the process but is not in the sensitivity list [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:22]
+INFO: [Synth 8-3491] module 'debounce' declared at '/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:11' bound to instance 'debounce_btn2' of component 'debounce' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_module.vhd:72]
+INFO: [Synth 8-3491] module 'duty_machine' declared at '/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:35' bound to instance 'duty_machine1' of component 'duty_machine' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_module.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'duty_machine' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:42]
+WARNING: [Synth 8-614] signal 'duty_counter' is read in the process but is not in the sensitivity list [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'duty_machine' (2#1) [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'duty_module' (3#1) [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_module.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'design_1_duty_module_0_0' (4#1) [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ip/design_1_duty_module_0_0/synth/design_1_duty_module_0_0.vhd:65]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.137 ; gain = 98.492 ; free physical = 215 ; free virtual = 2112
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.137 ; gain = 98.492 ; free physical = 215 ; free virtual = 2112
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1204.141 ; gain = 106.496 ; free physical = 215 ; free virtual = 2112
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg225-1
+INFO: [Synth 8-802] inferred FSM for state register 'pr_state_reg' in module 'debounce'
+WARNING: [Synth 8-6014] Unused sequential element pr_state_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:39]
+INFO: [Synth 8-5544] ROM "nx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element timer_reg_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:37]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:83]
+INFO: [Synth 8-5546] ROM "duty_counter" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element pr_state_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:39]
+WARNING: [Synth 8-6014] Unused sequential element pr_state_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:39]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                low_rest |                              001 |                              001
+                low_wait |                              010 |                              010
+               high_rest |                              011 |                              011
+               high_wait |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'pr_state_reg' using encoding 'sequential' in module 'debounce'
+WARNING: [Synth 8-6014] Unused sequential element pr_state_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:39]
+WARNING: [Synth 8-327] inferring latch for variable 'duty_counter_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:97]
+WARNING: [Synth 8-327] inferring latch for variable 'nx_state_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'timer_reg_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1220.156 ; gain = 122.512 ; free physical = 189 ; free virtual = 2089
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 4     
+	  14 Input      3 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   5 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debounce 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	  14 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module duty_machine 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "U0/duty_machine1/duty_counter" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element U0/debounce_btn1/timer_reg_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:37]
+WARNING: [Synth 8-6014] Unused sequential element U0/debounce_btn2/timer_reg_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:37]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.500 ; gain = 228.855 ; free physical = 154 ; free virtual = 1968
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.500 ; gain = 228.855 ; free physical = 154 ; free virtual = 1967
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.500 ; gain = 228.855 ; free physical = 153 ; free virtual = 1966
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1326.500 ; gain = 228.855 ; free physical = 152 ; free virtual = 1965
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[23] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[23]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[23] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[23]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[22] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[22]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[22] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[22]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[21] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[21]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[21] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[21]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[20] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[20]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[20] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[20]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[19] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[19]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[19] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[19]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[18] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[18]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[18] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[18]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[17] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[17]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[17] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[17]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[16] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[16]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[16] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[16]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[15] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[15]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[15] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[15]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[14] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[14]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[14] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[14]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[13] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[13]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[13] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[13]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[12] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[12]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[12] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[12]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[11] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[11]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[11] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[11]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[10] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[10]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[10] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[10]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[9] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[9]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[9] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[9]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[8] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[8]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[8] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[8]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[7] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[7]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[7] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[7]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[6] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[6]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[6] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[6]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[5] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[5]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[5] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[5]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[4] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[4]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[4] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[4]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[3] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[3]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[3] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[3]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[2] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[2]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[2] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[2]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[1] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[1]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[1] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[1]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[0] with 1st driver pin 'U0/duty_machine1/timer_reg_reg[0]__0/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net U0/duty_machine1/timer_reg[0] with 2nd driver pin 'U0/duty_machine1/timer_reg_reg[0]/Q' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:88]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       24|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1326.500 ; gain = 228.855 ; free physical = 152 ; free virtual = 1965
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1326.500 ; gain = 228.855 ; free physical = 152 ; free virtual = 1965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1326.500 ; gain = 228.855 ; free physical = 152 ; free virtual = 1965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1326.500 ; gain = 228.855 ; free physical = 152 ; free virtual = 1965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1326.500 ; gain = 228.855 ; free physical = 152 ; free virtual = 1965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    26|
+|2     |LUT1   |     2|
+|3     |LUT2   |    51|
+|4     |LUT3   |     8|
+|5     |LUT4   |    12|
+|6     |LUT5   |    10|
+|7     |LUT6   |    61|
+|8     |FDRE   |    80|
+|9     |LD     |    34|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------+-------------+------+
+|      |Instance          |Module       |Cells |
++------+------------------+-------------+------+
+|1     |top               |             |   284|
+|2     |  U0              |duty_module  |   284|
+|3     |    debounce_btn1 |debounce     |    93|
+|4     |    debounce_btn2 |debounce_0   |    93|
+|5     |    duty_machine1 |duty_machine |    98|
++------+------------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1326.500 ; gain = 228.855 ; free physical = 152 ; free virtual = 1965
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 48 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1326.500 ; gain = 228.855 ; free physical = 154 ; free virtual = 1967
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1326.508 ; gain = 228.855 ; free physical = 154 ; free virtual = 1967
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 60 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 34 instances were transformed.
+  LD => LDCE: 34 instances
+
+30 Infos, 12 Warnings, 48 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1427.512 ; gain = 342.449 ; free physical = 193 ; free virtual = 1915
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_duty_module_0_0_synth_1/design_1_duty_module_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1903.031 ; gain = 475.520 ; free physical = 206 ; free virtual = 1480
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_duty_module_0_0_synth_1/design_1_duty_module_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1904.031 ; gain = 0.000 ; free physical = 202 ; free virtual = 1478
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 31 14:36:31 2017...

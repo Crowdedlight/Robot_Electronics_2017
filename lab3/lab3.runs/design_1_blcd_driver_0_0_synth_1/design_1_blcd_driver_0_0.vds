@@ -1,0 +1,238 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Oct 31 14:38:36 2017
+# Process ID: 2488
+# Current directory: /home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_blcd_driver_0_0_synth_1
+# Command line: vivado -log design_1_blcd_driver_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_blcd_driver_0_0.tcl
+# Log file: /home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_blcd_driver_0_0_synth_1/design_1_blcd_driver_0_0.vds
+# Journal file: /home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_blcd_driver_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_blcd_driver_0_0.tcl -notrace
+Command: synth_design -top design_1_blcd_driver_0_0 -part xc7z010clg225-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg225'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg225'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2502 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1155.641 ; gain = 57.992 ; free physical = 648 ; free virtual = 2122
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_blcd_driver_0_0' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ip/design_1_blcd_driver_0_0/synth/design_1_blcd_driver_0_0.vhd:69]
+INFO: [Synth 8-3491] module 'blcd_driver' declared at '/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/bldc_driver.vhd:34' bound to instance 'U0' of component 'blcd_driver' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ip/design_1_blcd_driver_0_0/synth/design_1_blcd_driver_0_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'blcd_driver' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/bldc_driver.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'blcd_driver' (1#1) [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/bldc_driver.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'design_1_blcd_driver_0_0' (2#1) [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ip/design_1_blcd_driver_0_0/synth/design_1_blcd_driver_0_0.vhd:69]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.141 ; gain = 98.492 ; free physical = 656 ; free virtual = 2130
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.141 ; gain = 98.492 ; free physical = 657 ; free virtual = 2132
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1204.145 ; gain = 106.496 ; free physical = 657 ; free virtual = 2132
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg225-1
+WARNING: [Synth 8-327] inferring latch for variable 'U_in_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/bldc_driver.vhd:56]
+WARNING: [Synth 8-327] inferring latch for variable 'U_inh_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/bldc_driver.vhd:55]
+WARNING: [Synth 8-327] inferring latch for variable 'V_in_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/bldc_driver.vhd:58]
+WARNING: [Synth 8-327] inferring latch for variable 'V_inh_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/bldc_driver.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'W_in_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/bldc_driver.vhd:60]
+WARNING: [Synth 8-327] inferring latch for variable 'W_inh_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/bldc_driver.vhd:59]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1212.152 ; gain = 114.504 ; free physical = 646 ; free virtual = 2120
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 18    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module blcd_driver 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 18    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1315.730 ; gain = 218.082 ; free physical = 516 ; free virtual = 1990
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.730 ; gain = 218.082 ; free physical = 515 ; free virtual = 1989
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.730 ; gain = 218.082 ; free physical = 514 ; free virtual = 1988
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.730 ; gain = 218.082 ; free physical = 514 ; free virtual = 1988
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.730 ; gain = 218.082 ; free physical = 514 ; free virtual = 1988
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.730 ; gain = 218.082 ; free physical = 514 ; free virtual = 1988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.730 ; gain = 218.082 ; free physical = 514 ; free virtual = 1988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.730 ; gain = 218.082 ; free physical = 514 ; free virtual = 1988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.730 ; gain = 218.082 ; free physical = 514 ; free virtual = 1988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT3 |     7|
+|2     |LUT4 |     6|
+|3     |LDC  |     3|
+|4     |LDCP |     1|
+|5     |LDP  |     2|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+------------+------+
+|      |Instance |Module      |Cells |
++------+---------+------------+------+
+|1     |top      |            |    19|
+|2     |  U0     |blcd_driver |    19|
++------+---------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.730 ; gain = 218.082 ; free physical = 514 ; free virtual = 1988
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.730 ; gain = 218.082 ; free physical = 517 ; free virtual = 1991
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1315.738 ; gain = 218.082 ; free physical = 517 ; free virtual = 1991
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  LDC => LDCE: 3 instances
+  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 1 instances
+  LDP => LDPE: 2 instances
+
+13 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1424.766 ; gain = 339.699 ; free physical = 461 ; free virtual = 1935
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_blcd_driver_0_0_synth_1/design_1_blcd_driver_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1877.285 ; gain = 452.520 ; free physical = 182 ; free virtual = 1574
+INFO: [Common 17-1381] The checkpoint '/home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_blcd_driver_0_0_synth_1/design_1_blcd_driver_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1877.285 ; gain = 0.000 ; free physical = 182 ; free virtual = 1573
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 31 14:39:08 2017...
