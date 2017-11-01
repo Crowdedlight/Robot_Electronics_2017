@@ -1,8 +1,8 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-// Date        : Tue Oct 31 14:37:43 2017
-// Host        : mazur-W55xEU running 64-bit unknown
+// Date        : Wed Nov  1 13:11:25 2017
+// Host        : mazur-W55xEU running 64-bit Ubuntu 16.04.3 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_pwm_8bit_0_0_sim_netlist.v
 // Design      : design_1_pwm_8bit_0_0
@@ -24,232 +24,369 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) input reset;
   output pwm_out;
 
+  wire clk_200M_in;
   wire [7:0]duty_cycle_in;
   wire pwm_out;
+  wire reset;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_pwm_8bit U0
-       (.duty_cycle_in(duty_cycle_in),
-        .pwm_out(pwm_out));
+       (.clk_200M_in(clk_200M_in),
+        .duty_cycle_in(duty_cycle_in),
+        .pwm_out(pwm_out),
+        .reset(reset));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_pwm_8bit
    (pwm_out,
+    clk_200M_in,
+    reset,
     duty_cycle_in);
   output pwm_out;
+  input clk_200M_in;
+  input reset;
   input [7:0]duty_cycle_in;
 
-  wire [12:5]counter;
+  wire clk_200M_in;
+  wire \counter[0]_i_2_n_0 ;
+  wire \counter[0]_i_3_n_0 ;
+  wire \counter[0]_i_4_n_0 ;
+  wire \counter[0]_i_5_n_0 ;
+  wire \counter[12]_i_2_n_0 ;
+  wire \counter[4]_i_2_n_0 ;
+  wire \counter[4]_i_3_n_0 ;
+  wire \counter[4]_i_4_n_0 ;
+  wire \counter[4]_i_5_n_0 ;
+  wire \counter[8]_i_2_n_0 ;
+  wire \counter[8]_i_3_n_0 ;
+  wire \counter[8]_i_4_n_0 ;
+  wire \counter[8]_i_5_n_0 ;
+  wire \counter_reg[0]_i_1_n_0 ;
+  wire \counter_reg[0]_i_1_n_1 ;
+  wire \counter_reg[0]_i_1_n_2 ;
+  wire \counter_reg[0]_i_1_n_3 ;
+  wire \counter_reg[0]_i_1_n_4 ;
+  wire \counter_reg[0]_i_1_n_5 ;
+  wire \counter_reg[0]_i_1_n_6 ;
+  wire \counter_reg[0]_i_1_n_7 ;
+  wire \counter_reg[12]_i_1_n_7 ;
+  wire \counter_reg[4]_i_1_n_0 ;
+  wire \counter_reg[4]_i_1_n_1 ;
+  wire \counter_reg[4]_i_1_n_2 ;
+  wire \counter_reg[4]_i_1_n_3 ;
+  wire \counter_reg[4]_i_1_n_4 ;
+  wire \counter_reg[4]_i_1_n_5 ;
+  wire \counter_reg[4]_i_1_n_6 ;
+  wire \counter_reg[4]_i_1_n_7 ;
+  wire \counter_reg[8]_i_1_n_0 ;
+  wire \counter_reg[8]_i_1_n_1 ;
+  wire \counter_reg[8]_i_1_n_2 ;
+  wire \counter_reg[8]_i_1_n_3 ;
+  wire \counter_reg[8]_i_1_n_4 ;
+  wire \counter_reg[8]_i_1_n_5 ;
+  wire \counter_reg[8]_i_1_n_6 ;
+  wire \counter_reg[8]_i_1_n_7 ;
+  wire \counter_reg_n_0_[0] ;
+  wire \counter_reg_n_0_[1] ;
+  wire \counter_reg_n_0_[2] ;
+  wire \counter_reg_n_0_[3] ;
+  wire \counter_reg_n_0_[4] ;
   wire [7:0]duty_cycle_in;
-  wire plusOp_carry__0_i_1_n_0;
-  wire plusOp_carry__0_i_2_n_0;
-  wire plusOp_carry__0_i_3_n_0;
-  wire plusOp_carry__0_i_4_n_0;
-  wire plusOp_carry__0_n_0;
-  wire plusOp_carry__0_n_1;
-  wire plusOp_carry__0_n_2;
-  wire plusOp_carry__0_n_3;
-  wire plusOp_carry__1_i_1_n_0;
-  wire plusOp_carry__1_i_2_n_0;
-  wire plusOp_carry__1_i_3_n_0;
-  wire plusOp_carry__1_i_4_n_0;
-  wire plusOp_carry__1_n_1;
-  wire plusOp_carry__1_n_2;
-  wire plusOp_carry__1_n_3;
-  wire plusOp_carry_i_1_n_0;
-  wire plusOp_carry_i_2_n_0;
-  wire plusOp_carry_i_3_n_0;
-  wire plusOp_carry_i_4_n_0;
-  wire plusOp_carry_i_5_n_0;
-  wire plusOp_carry_n_0;
-  wire plusOp_carry_n_1;
-  wire plusOp_carry_n_2;
-  wire plusOp_carry_n_3;
-  wire plusOp_carry_n_4;
-  wire plusOp_carry_n_5;
-  wire plusOp_carry_n_6;
-  wire plusOp_carry_n_7;
+  wire [7:0]p_0_in;
   wire pwm_out;
-  wire pwm_out1;
-  wire pwm_out1_carry_i_1_n_0;
-  wire pwm_out1_carry_i_2_n_0;
-  wire pwm_out1_carry_i_3_n_0;
-  wire pwm_out1_carry_i_4_n_0;
-  wire pwm_out1_carry_i_5_n_0;
-  wire pwm_out1_carry_i_6_n_0;
-  wire pwm_out1_carry_i_7_n_0;
-  wire pwm_out1_carry_i_8_n_0;
-  wire pwm_out1_carry_n_1;
-  wire pwm_out1_carry_n_2;
-  wire pwm_out1_carry_n_3;
-  wire [3:3]NLW_plusOp_carry__1_CO_UNCONNECTED;
-  wire [3:0]NLW_pwm_out1_carry_O_UNCONNECTED;
-  wire [3:0]NLW_pwm_out1_carry__0_CO_UNCONNECTED;
-  wire [3:1]NLW_pwm_out1_carry__0_O_UNCONNECTED;
+  wire pwm_out_signal1;
+  wire pwm_out_signal1_carry_i_1_n_0;
+  wire pwm_out_signal1_carry_i_2_n_0;
+  wire pwm_out_signal1_carry_i_3_n_0;
+  wire pwm_out_signal1_carry_i_4_n_0;
+  wire pwm_out_signal1_carry_i_5_n_0;
+  wire pwm_out_signal1_carry_i_6_n_0;
+  wire pwm_out_signal1_carry_i_7_n_0;
+  wire pwm_out_signal1_carry_i_8_n_0;
+  wire pwm_out_signal1_carry_n_1;
+  wire pwm_out_signal1_carry_n_2;
+  wire pwm_out_signal1_carry_n_3;
+  wire reset;
+  wire [3:0]\NLW_counter_reg[12]_i_1_CO_UNCONNECTED ;
+  wire [3:1]\NLW_counter_reg[12]_i_1_O_UNCONNECTED ;
+  wire [3:0]NLW_pwm_out_signal1_carry_O_UNCONNECTED;
+  wire [3:0]NLW_pwm_out_signal1_carry__0_CO_UNCONNECTED;
+  wire [3:1]NLW_pwm_out_signal1_carry__0_O_UNCONNECTED;
 
-  CARRY4 plusOp_carry
-       (.CI(1'b0),
-        .CO({plusOp_carry_n_0,plusOp_carry_n_1,plusOp_carry_n_2,plusOp_carry_n_3}),
-        .CYINIT(plusOp_carry_i_1_n_0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({plusOp_carry_n_4,plusOp_carry_n_5,plusOp_carry_n_6,plusOp_carry_n_7}),
-        .S({plusOp_carry_i_2_n_0,plusOp_carry_i_3_n_0,plusOp_carry_i_4_n_0,plusOp_carry_i_5_n_0}));
-  CARRY4 plusOp_carry__0
-       (.CI(plusOp_carry_n_0),
-        .CO({plusOp_carry__0_n_0,plusOp_carry__0_n_1,plusOp_carry__0_n_2,plusOp_carry__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(counter[8:5]),
-        .S({plusOp_carry__0_i_1_n_0,plusOp_carry__0_i_2_n_0,plusOp_carry__0_i_3_n_0,plusOp_carry__0_i_4_n_0}));
   LUT1 #(
     .INIT(2'h2)) 
-    plusOp_carry__0_i_1
-       (.I0(counter[8]),
-        .O(plusOp_carry__0_i_1_n_0));
+    \counter[0]_i_2 
+       (.I0(\counter_reg_n_0_[3] ),
+        .O(\counter[0]_i_2_n_0 ));
   LUT1 #(
     .INIT(2'h2)) 
-    plusOp_carry__0_i_2
-       (.I0(counter[7]),
-        .O(plusOp_carry__0_i_2_n_0));
+    \counter[0]_i_3 
+       (.I0(\counter_reg_n_0_[2] ),
+        .O(\counter[0]_i_3_n_0 ));
   LUT1 #(
     .INIT(2'h2)) 
-    plusOp_carry__0_i_3
-       (.I0(counter[6]),
-        .O(plusOp_carry__0_i_3_n_0));
-  LUT1 #(
-    .INIT(2'h2)) 
-    plusOp_carry__0_i_4
-       (.I0(counter[5]),
-        .O(plusOp_carry__0_i_4_n_0));
-  CARRY4 plusOp_carry__1
-       (.CI(plusOp_carry__0_n_0),
-        .CO({NLW_plusOp_carry__1_CO_UNCONNECTED[3],plusOp_carry__1_n_1,plusOp_carry__1_n_2,plusOp_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(counter[12:9]),
-        .S({plusOp_carry__1_i_1_n_0,plusOp_carry__1_i_2_n_0,plusOp_carry__1_i_3_n_0,plusOp_carry__1_i_4_n_0}));
-  LUT1 #(
-    .INIT(2'h2)) 
-    plusOp_carry__1_i_1
-       (.I0(counter[12]),
-        .O(plusOp_carry__1_i_1_n_0));
-  LUT1 #(
-    .INIT(2'h2)) 
-    plusOp_carry__1_i_2
-       (.I0(counter[11]),
-        .O(plusOp_carry__1_i_2_n_0));
-  LUT1 #(
-    .INIT(2'h2)) 
-    plusOp_carry__1_i_3
-       (.I0(counter[10]),
-        .O(plusOp_carry__1_i_3_n_0));
-  LUT1 #(
-    .INIT(2'h2)) 
-    plusOp_carry__1_i_4
-       (.I0(counter[9]),
-        .O(plusOp_carry__1_i_4_n_0));
+    \counter[0]_i_4 
+       (.I0(\counter_reg_n_0_[1] ),
+        .O(\counter[0]_i_4_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
-    plusOp_carry_i_1
-       (.I0(plusOp_carry_i_1_n_0),
-        .O(plusOp_carry_i_1_n_0));
+    \counter[0]_i_5 
+       (.I0(\counter_reg_n_0_[0] ),
+        .O(\counter[0]_i_5_n_0 ));
   LUT1 #(
     .INIT(2'h2)) 
-    plusOp_carry_i_2
-       (.I0(plusOp_carry_n_4),
-        .O(plusOp_carry_i_2_n_0));
+    \counter[12]_i_2 
+       (.I0(p_0_in[7]),
+        .O(\counter[12]_i_2_n_0 ));
   LUT1 #(
     .INIT(2'h2)) 
-    plusOp_carry_i_3
-       (.I0(plusOp_carry_n_5),
-        .O(plusOp_carry_i_3_n_0));
+    \counter[4]_i_2 
+       (.I0(p_0_in[2]),
+        .O(\counter[4]_i_2_n_0 ));
   LUT1 #(
     .INIT(2'h2)) 
-    plusOp_carry_i_4
-       (.I0(plusOp_carry_n_6),
-        .O(plusOp_carry_i_4_n_0));
+    \counter[4]_i_3 
+       (.I0(p_0_in[1]),
+        .O(\counter[4]_i_3_n_0 ));
   LUT1 #(
     .INIT(2'h2)) 
-    plusOp_carry_i_5
-       (.I0(plusOp_carry_n_7),
-        .O(plusOp_carry_i_5_n_0));
-  CARRY4 pwm_out1_carry
+    \counter[4]_i_4 
+       (.I0(p_0_in[0]),
+        .O(\counter[4]_i_4_n_0 ));
+  LUT1 #(
+    .INIT(2'h2)) 
+    \counter[4]_i_5 
+       (.I0(\counter_reg_n_0_[4] ),
+        .O(\counter[4]_i_5_n_0 ));
+  LUT1 #(
+    .INIT(2'h2)) 
+    \counter[8]_i_2 
+       (.I0(p_0_in[6]),
+        .O(\counter[8]_i_2_n_0 ));
+  LUT1 #(
+    .INIT(2'h2)) 
+    \counter[8]_i_3 
+       (.I0(p_0_in[5]),
+        .O(\counter[8]_i_3_n_0 ));
+  LUT1 #(
+    .INIT(2'h2)) 
+    \counter[8]_i_4 
+       (.I0(p_0_in[4]),
+        .O(\counter[8]_i_4_n_0 ));
+  LUT1 #(
+    .INIT(2'h2)) 
+    \counter[8]_i_5 
+       (.I0(p_0_in[3]),
+        .O(\counter[8]_i_5_n_0 ));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[0] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[0]_i_1_n_7 ),
+        .Q(\counter_reg_n_0_[0] ));
+  CARRY4 \counter_reg[0]_i_1 
        (.CI(1'b0),
-        .CO({pwm_out1,pwm_out1_carry_n_1,pwm_out1_carry_n_2,pwm_out1_carry_n_3}),
-        .CYINIT(1'b1),
-        .DI({pwm_out1_carry_i_1_n_0,pwm_out1_carry_i_2_n_0,pwm_out1_carry_i_3_n_0,pwm_out1_carry_i_4_n_0}),
-        .O(NLW_pwm_out1_carry_O_UNCONNECTED[3:0]),
-        .S({pwm_out1_carry_i_5_n_0,pwm_out1_carry_i_6_n_0,pwm_out1_carry_i_7_n_0,pwm_out1_carry_i_8_n_0}));
-  CARRY4 pwm_out1_carry__0
-       (.CI(pwm_out1),
-        .CO(NLW_pwm_out1_carry__0_CO_UNCONNECTED[3:0]),
+        .CO({\counter_reg[0]_i_1_n_0 ,\counter_reg[0]_i_1_n_1 ,\counter_reg[0]_i_1_n_2 ,\counter_reg[0]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b1}),
+        .O({\counter_reg[0]_i_1_n_4 ,\counter_reg[0]_i_1_n_5 ,\counter_reg[0]_i_1_n_6 ,\counter_reg[0]_i_1_n_7 }),
+        .S({\counter[0]_i_2_n_0 ,\counter[0]_i_3_n_0 ,\counter[0]_i_4_n_0 ,\counter[0]_i_5_n_0 }));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[10] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[8]_i_1_n_5 ),
+        .Q(p_0_in[5]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[11] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[8]_i_1_n_4 ),
+        .Q(p_0_in[6]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[12] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[12]_i_1_n_7 ),
+        .Q(p_0_in[7]));
+  CARRY4 \counter_reg[12]_i_1 
+       (.CI(\counter_reg[8]_i_1_n_0 ),
+        .CO(\NLW_counter_reg[12]_i_1_CO_UNCONNECTED [3:0]),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({NLW_pwm_out1_carry__0_O_UNCONNECTED[3:1],pwm_out}),
+        .O({\NLW_counter_reg[12]_i_1_O_UNCONNECTED [3:1],\counter_reg[12]_i_1_n_7 }),
+        .S({1'b0,1'b0,1'b0,\counter[12]_i_2_n_0 }));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[1] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[0]_i_1_n_6 ),
+        .Q(\counter_reg_n_0_[1] ));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[2] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[0]_i_1_n_5 ),
+        .Q(\counter_reg_n_0_[2] ));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[3] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[0]_i_1_n_4 ),
+        .Q(\counter_reg_n_0_[3] ));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[4] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[4]_i_1_n_7 ),
+        .Q(\counter_reg_n_0_[4] ));
+  CARRY4 \counter_reg[4]_i_1 
+       (.CI(\counter_reg[0]_i_1_n_0 ),
+        .CO({\counter_reg[4]_i_1_n_0 ,\counter_reg[4]_i_1_n_1 ,\counter_reg[4]_i_1_n_2 ,\counter_reg[4]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\counter_reg[4]_i_1_n_4 ,\counter_reg[4]_i_1_n_5 ,\counter_reg[4]_i_1_n_6 ,\counter_reg[4]_i_1_n_7 }),
+        .S({\counter[4]_i_2_n_0 ,\counter[4]_i_3_n_0 ,\counter[4]_i_4_n_0 ,\counter[4]_i_5_n_0 }));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[5] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[4]_i_1_n_6 ),
+        .Q(p_0_in[0]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[6] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[4]_i_1_n_5 ),
+        .Q(p_0_in[1]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[7] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[4]_i_1_n_4 ),
+        .Q(p_0_in[2]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[8] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[8]_i_1_n_7 ),
+        .Q(p_0_in[3]));
+  CARRY4 \counter_reg[8]_i_1 
+       (.CI(\counter_reg[4]_i_1_n_0 ),
+        .CO({\counter_reg[8]_i_1_n_0 ,\counter_reg[8]_i_1_n_1 ,\counter_reg[8]_i_1_n_2 ,\counter_reg[8]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\counter_reg[8]_i_1_n_4 ,\counter_reg[8]_i_1_n_5 ,\counter_reg[8]_i_1_n_6 ,\counter_reg[8]_i_1_n_7 }),
+        .S({\counter[8]_i_2_n_0 ,\counter[8]_i_3_n_0 ,\counter[8]_i_4_n_0 ,\counter[8]_i_5_n_0 }));
+  FDCE #(
+    .INIT(1'b0)) 
+    \counter_reg[9] 
+       (.C(clk_200M_in),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(\counter_reg[8]_i_1_n_6 ),
+        .Q(p_0_in[4]));
+  CARRY4 pwm_out_signal1_carry
+       (.CI(1'b0),
+        .CO({pwm_out_signal1,pwm_out_signal1_carry_n_1,pwm_out_signal1_carry_n_2,pwm_out_signal1_carry_n_3}),
+        .CYINIT(1'b1),
+        .DI({pwm_out_signal1_carry_i_1_n_0,pwm_out_signal1_carry_i_2_n_0,pwm_out_signal1_carry_i_3_n_0,pwm_out_signal1_carry_i_4_n_0}),
+        .O(NLW_pwm_out_signal1_carry_O_UNCONNECTED[3:0]),
+        .S({pwm_out_signal1_carry_i_5_n_0,pwm_out_signal1_carry_i_6_n_0,pwm_out_signal1_carry_i_7_n_0,pwm_out_signal1_carry_i_8_n_0}));
+  CARRY4 pwm_out_signal1_carry__0
+       (.CI(pwm_out_signal1),
+        .CO(NLW_pwm_out_signal1_carry__0_CO_UNCONNECTED[3:0]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({NLW_pwm_out_signal1_carry__0_O_UNCONNECTED[3:1],pwm_out}),
         .S({1'b0,1'b0,1'b0,1'b1}));
   LUT4 #(
     .INIT(16'h2F02)) 
-    pwm_out1_carry_i_1
-       (.I0(counter[11]),
+    pwm_out_signal1_carry_i_1
+       (.I0(p_0_in[6]),
         .I1(duty_cycle_in[6]),
         .I2(duty_cycle_in[7]),
-        .I3(counter[12]),
-        .O(pwm_out1_carry_i_1_n_0));
+        .I3(p_0_in[7]),
+        .O(pwm_out_signal1_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
-    pwm_out1_carry_i_2
-       (.I0(counter[9]),
+    pwm_out_signal1_carry_i_2
+       (.I0(p_0_in[4]),
         .I1(duty_cycle_in[4]),
         .I2(duty_cycle_in[5]),
-        .I3(counter[10]),
-        .O(pwm_out1_carry_i_2_n_0));
+        .I3(p_0_in[5]),
+        .O(pwm_out_signal1_carry_i_2_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
-    pwm_out1_carry_i_3
-       (.I0(counter[7]),
+    pwm_out_signal1_carry_i_3
+       (.I0(p_0_in[2]),
         .I1(duty_cycle_in[2]),
         .I2(duty_cycle_in[3]),
-        .I3(counter[8]),
-        .O(pwm_out1_carry_i_3_n_0));
+        .I3(p_0_in[3]),
+        .O(pwm_out_signal1_carry_i_3_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
-    pwm_out1_carry_i_4
-       (.I0(counter[5]),
+    pwm_out_signal1_carry_i_4
+       (.I0(p_0_in[0]),
         .I1(duty_cycle_in[0]),
         .I2(duty_cycle_in[1]),
-        .I3(counter[6]),
-        .O(pwm_out1_carry_i_4_n_0));
+        .I3(p_0_in[1]),
+        .O(pwm_out_signal1_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
-    pwm_out1_carry_i_5
-       (.I0(counter[11]),
+    pwm_out_signal1_carry_i_5
+       (.I0(p_0_in[6]),
         .I1(duty_cycle_in[6]),
-        .I2(counter[12]),
+        .I2(p_0_in[7]),
         .I3(duty_cycle_in[7]),
-        .O(pwm_out1_carry_i_5_n_0));
+        .O(pwm_out_signal1_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
-    pwm_out1_carry_i_6
-       (.I0(counter[9]),
+    pwm_out_signal1_carry_i_6
+       (.I0(p_0_in[4]),
         .I1(duty_cycle_in[4]),
-        .I2(counter[10]),
+        .I2(p_0_in[5]),
         .I3(duty_cycle_in[5]),
-        .O(pwm_out1_carry_i_6_n_0));
+        .O(pwm_out_signal1_carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
-    pwm_out1_carry_i_7
-       (.I0(counter[7]),
+    pwm_out_signal1_carry_i_7
+       (.I0(p_0_in[2]),
         .I1(duty_cycle_in[2]),
-        .I2(counter[8]),
+        .I2(p_0_in[3]),
         .I3(duty_cycle_in[3]),
-        .O(pwm_out1_carry_i_7_n_0));
+        .O(pwm_out_signal1_carry_i_7_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
-    pwm_out1_carry_i_8
-       (.I0(counter[5]),
+    pwm_out_signal1_carry_i_8
+       (.I0(p_0_in[0]),
         .I1(duty_cycle_in[0]),
-        .I2(counter[6]),
+        .I2(p_0_in[1]),
         .I3(duty_cycle_in[1]),
-        .O(pwm_out1_carry_i_8_n_0));
+        .O(pwm_out_signal1_carry_i_8_n_0));
 endmodule
 `ifndef GLBL
 `define GLBL

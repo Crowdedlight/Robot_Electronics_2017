@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
---Date        : Tue Oct 31 14:50:51 2017
+--Date        : Wed Nov  1 13:25:43 2017
 --Host        : mazur-W55xEU running 64-bit Ubuntu 16.04.3 LTS
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -40,26 +40,19 @@ entity design_1 is
     V_inh : out STD_LOGIC;
     W_in : out STD_LOGIC;
     W_inh : out STD_LOGIC;
-    encoder_pos_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     hall_in : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    mosi : out STD_LOGIC;
     raw_signal_decrement : in STD_LOGIC;
-    raw_signal_increment : in STD_LOGIC
+    raw_signal_increment : in STD_LOGIC;
+    spi_clk : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=5,numReposBlks=5,numNonXlnxBlks=4,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=7,numNonXlnxBlks=5,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
 
 architecture STRUCTURE of design_1 is
-  component design_1_duty_module_0_0 is
-  port (
-    clk_200M_in : in STD_LOGIC;
-    raw_signal_increment : in STD_LOGIC;
-    raw_signal_decrement : in STD_LOGIC;
-    duty_cycle_out : out STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component design_1_duty_module_0_0;
   component design_1_bldc_decoder_0_0 is
   port (
     clk_200M_in : in STD_LOGIC;
@@ -68,14 +61,6 @@ architecture STRUCTURE of design_1 is
     encoder_pos_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component design_1_bldc_decoder_0_0;
-  component design_1_pwm_8bit_0_0 is
-  port (
-    clk_200M_in : in STD_LOGIC;
-    duty_cycle_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    reset : in STD_LOGIC;
-    pwm_out : out STD_LOGIC
-  );
-  end component design_1_pwm_8bit_0_0;
   component design_1_processing_system7_0_0 is
   port (
     TTC0_WAVE0_OUT : out STD_LOGIC;
@@ -162,6 +147,35 @@ architecture STRUCTURE of design_1 is
     W_inh : out STD_LOGIC
   );
   end component design_1_blcd_driver_0_0;
+  component design_1_duty_module_0_0 is
+  port (
+    clk_200M_in : in STD_LOGIC;
+    raw_signal_increment : in STD_LOGIC;
+    raw_signal_decrement : in STD_LOGIC;
+    duty_cycle_out : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component design_1_duty_module_0_0;
+  component design_1_xlconstant_0_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component design_1_xlconstant_0_0;
+  component design_1_pwm_8bit_0_0 is
+  port (
+    clk_200M_in : in STD_LOGIC;
+    duty_cycle_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    reset : in STD_LOGIC;
+    pwm_out : out STD_LOGIC
+  );
+  end component design_1_pwm_8bit_0_0;
+  component design_1_spi_master_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    data : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    spi_clk : out STD_LOGIC;
+    mosi : out STD_LOGIC
+  );
+  end component design_1_spi_master_0_0;
   signal blcd_driver_0_U_in : STD_LOGIC;
   signal blcd_driver_0_U_inh : STD_LOGIC;
   signal blcd_driver_0_V_in : STD_LOGIC;
@@ -197,6 +211,9 @@ architecture STRUCTURE of design_1 is
   signal pwm_8bit_0_pwm_out : STD_LOGIC;
   signal raw_signal_decrement_1 : STD_LOGIC;
   signal raw_signal_increment_1 : STD_LOGIC;
+  signal spi_master_0_mosi : STD_LOGIC;
+  signal spi_master_0_spi_clk : STD_LOGIC;
+  signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_processing_system7_0_FCLK_RESET0_N_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_M_AXI_GP0_ARVALID_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_M_AXI_GP0_AWVALID_UNCONNECTED : STD_LOGIC;
@@ -237,10 +254,11 @@ begin
   V_inh <= blcd_driver_0_V_inh;
   W_in <= blcd_driver_0_W_in;
   W_inh <= blcd_driver_0_W_inh;
-  encoder_pos_out(31 downto 0) <= bldc_decoder_0_encoder_pos_out(31 downto 0);
   hall_in_1(2 downto 0) <= hall_in(2 downto 0);
+  mosi <= spi_master_0_mosi;
   raw_signal_decrement_1 <= raw_signal_decrement;
   raw_signal_increment_1 <= raw_signal_increment;
+  spi_clk <= spi_master_0_spi_clk;
 blcd_driver_0: component design_1_blcd_driver_0_0
      port map (
       U_in => blcd_driver_0_U_in,
@@ -257,7 +275,7 @@ bldc_decoder_0: component design_1_bldc_decoder_0_0
       clk_200M_in => processing_system7_0_FCLK_CLK1,
       encoder_pos_out(31 downto 0) => bldc_decoder_0_encoder_pos_out(31 downto 0),
       hall_in(2 downto 0) => hall_in_1(2 downto 0),
-      reset_in => '0'
+      reset_in => xlconstant_0_dout(0)
     );
 duty_module_0: component design_1_duty_module_0_0
      port map (
@@ -344,6 +362,17 @@ pwm_8bit_0: component design_1_pwm_8bit_0_0
       clk_200M_in => processing_system7_0_FCLK_CLK1,
       duty_cycle_in(7 downto 0) => duty_module_0_duty_cycle_out(7 downto 0),
       pwm_out => pwm_8bit_0_pwm_out,
-      reset => '0'
+      reset => xlconstant_0_dout(0)
+    );
+spi_master_0: component design_1_spi_master_0_0
+     port map (
+      clk => processing_system7_0_FCLK_CLK1,
+      data(31 downto 0) => bldc_decoder_0_encoder_pos_out(31 downto 0),
+      mosi => spi_master_0_mosi,
+      spi_clk => spi_master_0_spi_clk
+    );
+xlconstant_0: component design_1_xlconstant_0_0
+     port map (
+      dout(0) => xlconstant_0_dout(0)
     );
 end STRUCTURE;

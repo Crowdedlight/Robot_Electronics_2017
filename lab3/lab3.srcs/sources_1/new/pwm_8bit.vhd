@@ -40,7 +40,7 @@ entity pwm_8bit is
     bitshift : integer := 5
     );
     Port ( clk_200M_in : in STD_LOGIC;
-           duty_cycle_in : in STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
+           duty_cycle_in : in STD_LOGIC_VECTOR (7 downto 0);
            reset : in STD_LOGIC;
            pwm_out : out STD_LOGIC);
 end pwm_8bit;
@@ -48,23 +48,31 @@ end pwm_8bit;
 architecture Behavioral of pwm_8bit is
 
 signal counter : STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
+signal pwm_out_signal : STD_LOGIC := '0';
 
 begin
 
 process(clk_200M_in, reset)
 begin
     if (reset = '1') then
-    counter <= (31 downto 0 => '0');
+        counter <= (others => '0');
+    elsif (rising_edge(clk_200M_in)) then
+        counter <= std_logic_vector(unsigned(counter) + 1);
     end if;
-    counter <= std_logic_vector(unsigned(counter) + 1);
 end process;
 
-process(counter, reset)
+process(counter)
+begin    
+    if(unsigned(counter((bitshift+7) downto bitshift)) >= (unsigned(duty_cycle_in))) then
+        pwm_out_signal <= '0';
+    else
+        pwm_out_signal <= '1';
+    end if;    
+end process;
+
+process(pwm_out_signal)
 begin
-pwm_out <= '1';
-        if(unsigned(counter((bitshift+7) downto bitshift)) >= (unsigned(duty_cycle_in))) then
-            pwm_out <= '0';
-        end if;
+    pwm_out <= pwm_out_signal;
 end process;
 
 end Behavioral;

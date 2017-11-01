@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_spi_master_0_0_synth_1" LaunchDir="/home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_spi_master_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

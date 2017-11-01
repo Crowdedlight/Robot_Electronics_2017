@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-| Date         : Tue Oct 31 14:36:31 2017
-| Host         : mazur-W55xEU running 64-bit unknown
+| Date         : Wed Nov  1 11:40:26 2017
+| Host         : mazur-W55xEU running 64-bit Ubuntu 16.04.3 LTS
 | Command      : report_utilization -file design_1_duty_module_0_0_utilization_synth.rpt -pb design_1_duty_module_0_0_utilization_synth.pb
 | Design       : design_1_duty_module_0_0
 | Device       : 7z010clg225-1
@@ -30,12 +30,12 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  117 |     0 |     17600 |  0.66 |
-|   LUT as Logic          |  117 |     0 |     17600 |  0.66 |
+| Slice LUTs*             |  142 |     0 |     17600 |  0.81 |
+|   LUT as Logic          |  142 |     0 |     17600 |  0.81 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
-| Slice Registers         |  114 |     0 |     35200 |  0.32 |
+| Slice Registers         |   90 |     0 |     35200 |  0.26 |
 |   Register as Flip Flop |   80 |     0 |     35200 |  0.23 |
-|   Register as Latch     |   34 |     0 |     35200 |  0.10 |
+|   Register as Latch     |   10 |     0 |     35200 |  0.03 |
 | F7 Muxes                |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                |    0 |     0 |      4400 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 34    |          Yes |           - |        Reset |
+| 10    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 80    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -147,14 +147,14 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |   80 |        Flop & Latch |
-| LUT6     |   61 |                 LUT |
+| LUT6     |   62 |                 LUT |
 | LUT2     |   51 |                 LUT |
-| LDCE     |   34 |        Flop & Latch |
 | CARRY4   |   26 |          CarryLogic |
-| LUT4     |   12 |                 LUT |
+| LUT1     |   25 |                 LUT |
+| LUT4     |   14 |                 LUT |
 | LUT5     |   10 |                 LUT |
+| LDCE     |   10 |        Flop & Latch |
 | LUT3     |    8 |                 LUT |
-| LUT1     |    2 |                 LUT |
 +----------+------+---------------------+
 
 

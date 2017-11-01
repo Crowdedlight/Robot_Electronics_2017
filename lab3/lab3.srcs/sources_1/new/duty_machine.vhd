@@ -85,10 +85,8 @@ begin
             if(increment = '1') then
             --go to state btn1_pressed & reset timer
                 nx_state <= btn1_pressed;
-                timer_reg <= (others => '0');
             elsif(decrement = '1') then
                 nx_state <= btn2_pressed;
-                timer_reg <= (others => '0');
             end if;             
                 
         when btn1_pressed =>
