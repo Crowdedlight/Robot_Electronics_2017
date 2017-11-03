@@ -2,39 +2,12 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Wed Nov  1 12:03:35 2017
-# Process ID: 10498
+# Start of session at: Thu Nov  2 20:15:18 2017
+# Process ID: 6402
 # Current directory: /home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_xlconstant_0_0_synth_1
 # Command line: vivado -log design_1_xlconstant_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xlconstant_0_0.tcl
 # Log file: /home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_xlconstant_0_0_synth_1/design_1_xlconstant_0_0.vds
 # Journal file: /home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_xlconstant_0_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source design_1_xlconstant_0_0.tcl -notrace
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1155.648 ; gain = 57.996 ; free physical = 1960 ; free virtual = 3809
-INFO: [Synth 8-638] synthesizing module 'design_1_xlconstant_0_0' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'xlconstant_v1_1_3_xlconstant' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ipshared/45df/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-256] done synthesizing module 'xlconstant_v1_1_3_xlconstant' (1#1) [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ipshared/45df/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-256] done synthesizing module 'design_1_xlconstant_0_0' (2#1) [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.148 ; gain = 98.496 ; free physical = 1947 ; free virtual = 3797
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.148 ; gain = 98.496 ; free physical = 1948 ; free virtual = 3798
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1204.152 ; gain = 106.500 ; free physical = 1948 ; free virtual = 3798
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1204.152 ; gain = 106.500 ; free physical = 1948 ; free virtual = 3798
-INFO: [Device 21-403] Loading part xc7z010clg225-1
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1290.473 ; gain = 192.820 ; free physical = 1730 ; free virtual = 3576
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1290.473 ; gain = 192.820 ; free physical = 1728 ; free virtual = 3574
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1298.480 ; gain = 200.828 ; free physical = 1726 ; free virtual = 3572
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1298.480 ; gain = 200.828 ; free physical = 1702 ; free virtual = 3548
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1298.480 ; gain = 200.828 ; free physical = 1702 ; free virtual = 3548
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1298.480 ; gain = 200.828 ; free physical = 1702 ; free virtual = 3548
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1298.480 ; gain = 200.828 ; free physical = 1702 ; free virtual = 3548
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1298.480 ; gain = 200.828 ; free physical = 1702 ; free virtual = 3548
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1298.480 ; gain = 200.828 ; free physical = 1702 ; free virtual = 3548
-
-Report Cell Usage: 
-+-+-----+------+
-| |Cell |Count |
-+-+-----+------+
-+-+-----+------+
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1298.480 ; gain = 200.828 ; free physical = 1702 ; free virtual = 3548
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1391.488 ; gain = 306.422 ; free physical = 1606 ; free virtual = 3452
-write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1797.008 ; gain = 405.520 ; free physical = 1062 ; free virtual = 2907
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_xlconstant_0_0, cache-ID = 1eceafa37807d3ed.

@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Wed Nov  1 11:22:13 2017
-# Process ID: 3221
+# Start of session at: Thu Nov  2 15:02:03 2017
+# Process ID: 23444
 # Current directory: /home/frederik/Documents/Rob_Electronics
 # Command line: vivado
 # Log file: /home/frederik/Documents/Rob_Electronics/vivado.log
@@ -12,35 +12,38 @@
 start_gui
 open_project /home/frederik/Documents/Rob_Electronics/lab3/lab3.xpr
 update_compile_order -fileset sources_1
-update_module_reference design_1_spi_master_0_0
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-launch_runs impl_1 -jobs 2
-wait_on_run impl_1
-update_module_reference design_1_duty_module_0_0
-reset_run synth_1
-launch_runs impl_1 -jobs 2
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-wait_on_run impl_1
-open_run impl_1
-reset_run synth_1
-update_module_reference design_1_pwm_8bit_0_0
-launch_runs impl_1 -jobs 2
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-wait_on_run impl_1
-reset_run synth_1
-update_module_reference design_1_pwm_8bit_0_0
-launch_runs impl_1 -jobs 2
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
-endgroup
-set_property location {2 549 564} [get_bd_cells xlconstant_0]
-set_property -dict [list CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_0]
-connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins bldc_decoder_0/reset_in]
-connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins pwm_8bit_0/reset]
-startgroup
-endgroup
-save_bd_design
-launch_runs impl_1 -jobs 2
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top design_1_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+open_bd_design {/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/design_1.bd}
+reset_target all [get_files  /home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  /home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+generate_target Simulation [get_files /home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files /home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/design_1.bd] -no_script -force -quiet
+launch_simulation
+source TB_completeSystem.tcl
+relaunch_sim
+run 100 ms
+run 300 ms
+relaunch_sim
+run 300 ms
+relaunch_sim
+run 300 ms
+relaunch_sim
+run 300 ms
+close_sim
+open_bd_design {/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_nets clk_200M_in_1]
+set_property location {-43 235} [get_bd_ports clk_200M_in]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins spi_master_0/clk_200M_in]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins pwm_8bit_0/clk_200M_in]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins bldc_decoder_0/clk_200M_in]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins duty_module_0/clk_200M_in]
+set_property location {367 284} [get_bd_ports hall_in]
+set_property location {408 649} [get_bd_ports hall_in]

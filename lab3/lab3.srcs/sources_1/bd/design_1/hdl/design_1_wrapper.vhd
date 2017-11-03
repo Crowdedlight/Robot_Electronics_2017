@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
---Date        : Wed Nov  1 13:25:43 2017
+--Date        : Thu Nov  2 21:00:10 2017
 --Host        : mazur-W55xEU running 64-bit Ubuntu 16.04.3 LTS
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -40,11 +40,12 @@ entity design_1_wrapper is
     V_inh : out STD_LOGIC;
     W_in : out STD_LOGIC;
     W_inh : out STD_LOGIC;
+    clk_200M_in : in STD_LOGIC;
     hall_in : in STD_LOGIC_VECTOR ( 2 downto 0 );
     mosi : out STD_LOGIC;
     raw_signal_decrement : in STD_LOGIC;
     raw_signal_increment : in STD_LOGIC;
-    spi_clk : out STD_LOGIC
+    spi_clk_out : out STD_LOGIC
   );
 end design_1_wrapper;
 
@@ -81,8 +82,9 @@ architecture STRUCTURE of design_1_wrapper is
     W_in : out STD_LOGIC;
     W_inh : out STD_LOGIC;
     hall_in : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    spi_clk : out STD_LOGIC;
-    mosi : out STD_LOGIC
+    mosi : out STD_LOGIC;
+    spi_clk_out : out STD_LOGIC;
+    clk_200M_in : in STD_LOGIC
   );
   end component design_1;
 begin
@@ -115,10 +117,11 @@ design_1_i: component design_1
       V_inh => V_inh,
       W_in => W_in,
       W_inh => W_inh,
+      clk_200M_in => clk_200M_in,
       hall_in(2 downto 0) => hall_in(2 downto 0),
       mosi => mosi,
       raw_signal_decrement => raw_signal_decrement,
       raw_signal_increment => raw_signal_increment,
-      spi_clk => spi_clk
+      spi_clk_out => spi_clk_out
     );
 end STRUCTURE;

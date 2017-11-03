@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Nov  3 00:41:24 2017
+# Process ID: 11896
+# Current directory: /home/frederik/Documents/Rob_Electronics/lab3/lab3.sim/sim_1/behav
+# Command line: wbtcv -mode batch -source /home/frederik/Documents/Rob_Electronics/lab3/lab3.sim/sim_1/behav/xsim.dir/TB_pwm_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/frederik/Documents/Rob_Electronics/lab3/lab3.sim/sim_1/behav/webtalk.log
+# Journal file: /home/frederik/Documents/Rob_Electronics/lab3/lab3.sim/sim_1/behav/webtalk.jou
+#-----------------------------------------------------------
+source /home/frederik/Documents/Rob_Electronics/lab3/lab3.sim/sim_1/behav/xsim.dir/TB_pwm_behav/webtalk/xsim_webtalk.tcl -notrace

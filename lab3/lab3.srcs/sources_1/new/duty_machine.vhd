@@ -45,6 +45,7 @@ type state is (idle, btn1_pressed, btn2_pressed, reset_cnt);
 signal pr_state, nx_state: state := idle;
 signal duty_counter : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
 signal timer_reg : unsigned(23 downto 0) := (others => '0');
+signal delay_value : STD_LOGIC_VECTOR(23 downto 0) := x"3D0900"; --4milion delay
 
 begin
 
@@ -94,7 +95,7 @@ begin
                 -- go idle & increase counter
                 duty_counter <= STD_LOGIC_VECTOR(unsigned(duty_counter) + 1);
                 nx_state <= idle;
-            elsif(timer_reg = 200) then --TODO figure out how to use timer and timeout
+            elsif(timer_reg = unsigned(delay_value)) then
                  --go idle & increse counter
                 duty_counter <= STD_LOGIC_VECTOR(unsigned(duty_counter) + 1);
                 nx_state <= idle;

@@ -32,9 +32,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity spi_master is
-    Port ( clk : in STD_LOGIC;
+    Port ( clk_200M_in : in STD_LOGIC;
            data : in STD_LOGIC_VECTOR (31 downto 0);
-           spi_clk : out STD_LOGIC;
+           spi_clk_out : out STD_LOGIC;
            mosi : out STD_LOGIC);
 end spi_master;
 
@@ -49,15 +49,15 @@ architecture Behavioral of spi_master is
     signal counter : integer := 0;
 begin
 
-process(clk)
+process(clk_200M_in)
 begin
-    if (rising_edge(clk)) then
+    if (rising_edge(clk_200M_in)) then
         tenMHzcounter <= tenMHzcounter + 1;
         hundredHzcounter <= hundredHzcounter + 1;
         if (tenMHzcounter = 20) then
             tenMHzcounter <= 0;
             sclk <= not sclk;
-            spi_clk <= sclk;
+            spi_clk_out <= sclk;
         end if;
         if (hundredHzcounter = 2000000) then
             hundredHzcounter <= 0;

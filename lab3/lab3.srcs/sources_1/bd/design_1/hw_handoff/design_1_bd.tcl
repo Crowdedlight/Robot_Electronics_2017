@@ -171,11 +171,12 @@ proc create_root_design { parentCell } {
   set V_inh [ create_bd_port -dir O V_inh ]
   set W_in [ create_bd_port -dir O W_in ]
   set W_inh [ create_bd_port -dir O W_inh ]
+  set clk_200M_in [ create_bd_port -dir I clk_200M_in ]
   set hall_in [ create_bd_port -dir I -from 2 -to 0 hall_in ]
   set mosi [ create_bd_port -dir O mosi ]
   set raw_signal_decrement [ create_bd_port -dir I raw_signal_decrement ]
   set raw_signal_increment [ create_bd_port -dir I raw_signal_increment ]
-  set spi_clk [ create_bd_port -dir O -type clk spi_clk ]
+  set spi_clk_out [ create_bd_port -dir O spi_clk_out ]
 
   # Create instance: blcd_driver_0, and set properties
   set block_name blcd_driver
@@ -221,7 +222,7 @@ CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.158730} \
 CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {125.000000} \
 CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} \
 CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {50.000000} \
-CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {200.000000} \
+CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {100.000000} \
 CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} \
 CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} \
 CONFIG.PCW_ACT_I2C_PERIPHERAL_FREQMHZ {50} \
@@ -263,7 +264,7 @@ CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} \
 CONFIG.PCW_CAN_PERIPHERAL_FREQMHZ {100} \
 CONFIG.PCW_CAN_PERIPHERAL_VALID {0} \
 CONFIG.PCW_CLK0_FREQ {50000000} \
-CONFIG.PCW_CLK1_FREQ {200000000} \
+CONFIG.PCW_CLK1_FREQ {100000000} \
 CONFIG.PCW_CLK2_FREQ {10000000} \
 CONFIG.PCW_CLK3_FREQ {10000000} \
 CONFIG.PCW_CORE0_FIQ_INTR {0} \
@@ -386,7 +387,7 @@ CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {8} \
 CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {4} \
 CONFIG.PCW_FCLK1_PERIPHERAL_CLKSRC {IO PLL} \
 CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {4} \
-CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {2} \
+CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {4} \
 CONFIG.PCW_FCLK2_PERIPHERAL_CLKSRC {IO PLL} \
 CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {1} \
 CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR1 {1} \
@@ -398,7 +399,7 @@ CONFIG.PCW_FCLK_CLK1_BUF {TRUE} \
 CONFIG.PCW_FCLK_CLK2_BUF {FALSE} \
 CONFIG.PCW_FCLK_CLK3_BUF {FALSE} \
 CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {50} \
-CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {200} \
+CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {100} \
 CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {50} \
 CONFIG.PCW_FPGA3_PERIPHERAL_FREQMHZ {50} \
 CONFIG.PCW_FPGA_FCLK0_ENABLE {1} \
@@ -732,7 +733,7 @@ CONFIG.PCW_SPI1_SPI1_IO {<Select>} \
 CONFIG.PCW_SPI_PERIPHERAL_CLKSRC {IO PLL} \
 CONFIG.PCW_SPI_PERIPHERAL_DIVISOR0 {1} \
 CONFIG.PCW_SPI_PERIPHERAL_FREQMHZ {166.666666} \
-CONFIG.PCW_SPI_PERIPHERAL_VALID {0} \
+CONFIG.PCW_SPI_PERIPHERAL_VALID {1} \
 CONFIG.PCW_S_AXI_ACP_ARUSER_VAL {31} \
 CONFIG.PCW_S_AXI_ACP_AWUSER_VAL {31} \
 CONFIG.PCW_S_AXI_ACP_ID_WIDTH {3} \
@@ -841,10 +842,10 @@ CONFIG.PCW_UIPARAM_DDR_DQS_2_PROPOGATION_DELAY {160} \
 CONFIG.PCW_UIPARAM_DDR_DQS_3_LENGTH_MM {0} \
 CONFIG.PCW_UIPARAM_DDR_DQS_3_PACKAGE_LENGTH {700} \
 CONFIG.PCW_UIPARAM_DDR_DQS_3_PROPOGATION_DELAY {160} \
-CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 {0.0} \
-CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 {0.0} \
-CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 {0.0} \
-CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 {0.0} \
+CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 {0} \
+CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 {0} \
+CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 {0} \
+CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 {0} \
 CONFIG.PCW_UIPARAM_DDR_DQ_0_LENGTH_MM {0} \
 CONFIG.PCW_UIPARAM_DDR_DQ_0_PACKAGE_LENGTH {77.166} \
 CONFIG.PCW_UIPARAM_DDR_DQ_0_PROPOGATION_DELAY {160} \
@@ -967,15 +968,15 @@ CONFIG.CONST_VAL {0} \
   connect_bd_net -net blcd_driver_0_W_in [get_bd_ports W_in] [get_bd_pins blcd_driver_0/W_in]
   connect_bd_net -net blcd_driver_0_W_inh [get_bd_ports W_inh] [get_bd_pins blcd_driver_0/W_inh]
   connect_bd_net -net bldc_decoder_0_encoder_pos_out [get_bd_pins bldc_decoder_0/encoder_pos_out] [get_bd_pins spi_master_0/data]
+  connect_bd_net -net clk_200M_in_1 [get_bd_ports clk_200M_in] [get_bd_pins bldc_decoder_0/clk_200M_in] [get_bd_pins duty_module_0/clk_200M_in] [get_bd_pins pwm_8bit_0/clk_200M_in] [get_bd_pins spi_master_0/clk_200M_in]
   connect_bd_net -net duty_module_0_duty_cycle_out [get_bd_pins duty_module_0/duty_cycle_out] [get_bd_pins pwm_8bit_0/duty_cycle_in]
   connect_bd_net -net hall_in_1 [get_bd_ports hall_in] [get_bd_pins blcd_driver_0/hall_in] [get_bd_pins bldc_decoder_0/hall_in]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
-  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins bldc_decoder_0/clk_200M_in] [get_bd_pins duty_module_0/clk_200M_in] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins pwm_8bit_0/clk_200M_in] [get_bd_pins spi_master_0/clk]
   connect_bd_net -net pwm_8bit_0_pwm_out [get_bd_pins blcd_driver_0/pwm] [get_bd_pins pwm_8bit_0/pwm_out]
   connect_bd_net -net raw_signal_decrement_1 [get_bd_ports raw_signal_decrement] [get_bd_pins duty_module_0/raw_signal_decrement]
   connect_bd_net -net raw_signal_increment_1 [get_bd_ports raw_signal_increment] [get_bd_pins duty_module_0/raw_signal_increment]
   connect_bd_net -net spi_master_0_mosi [get_bd_ports mosi] [get_bd_pins spi_master_0/mosi]
-  connect_bd_net -net spi_master_0_spi_clk [get_bd_ports spi_clk] [get_bd_pins spi_master_0/spi_clk]
+  connect_bd_net -net spi_master_0_spi_clk_out [get_bd_ports spi_clk_out] [get_bd_pins spi_master_0/spi_clk_out]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins bldc_decoder_0/reset_in] [get_bd_pins pwm_8bit_0/reset] [get_bd_pins xlconstant_0/dout]
 
   # Create address segments

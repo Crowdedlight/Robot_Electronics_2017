@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Wed Nov  1 11:39:53 2017
-# Process ID: 5357
+# Start of session at: Thu Nov  2 20:12:13 2017
+# Process ID: 5607
 # Current directory: /home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_duty_module_0_0_synth_1
 # Command line: vivado -log design_1_duty_module_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_duty_module_0_0.tcl
 # Log file: /home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_duty_module_0_0_synth_1/design_1_duty_module_0_0.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg225'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg225'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5369 
+INFO: Helper process launched with PID 5625 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1155.637 ; gain = 57.992 ; free physical = 1866 ; free virtual = 3697
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1155.645 ; gain = 57.992 ; free physical = 2521 ; free virtual = 4796
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_duty_module_0_0' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ip/design_1_duty_module_0_0/synth/design_1_duty_module_0_0.vhd:65]
 INFO: [Synth 8-3491] module 'duty_module' declared at '/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_module.vhd:34' bound to instance 'U0' of component 'duty_module' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ip/design_1_duty_module_0_0/synth/design_1_duty_module_0_0.vhd:81]
@@ -29,22 +29,23 @@ INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [/home/frederik/Do
 INFO: [Synth 8-3491] module 'debounce' declared at '/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:11' bound to instance 'debounce_btn2' of component 'debounce' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_module.vhd:72]
 INFO: [Synth 8-3491] module 'duty_machine' declared at '/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:35' bound to instance 'duty_machine1' of component 'duty_machine' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_module.vhd:80]
 INFO: [Synth 8-638] synthesizing module 'duty_machine' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:42]
-WARNING: [Synth 8-614] signal 'duty_counter' is read in the process but is not in the sensitivity list [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:81]
+WARNING: [Synth 8-614] signal 'duty_counter' is read in the process but is not in the sensitivity list [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:82]
+WARNING: [Synth 8-614] signal 'delay_value' is read in the process but is not in the sensitivity list [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:82]
 INFO: [Synth 8-256] done synthesizing module 'duty_machine' (2#1) [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:42]
 INFO: [Synth 8-256] done synthesizing module 'duty_module' (3#1) [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_module.vhd:41]
 INFO: [Synth 8-256] done synthesizing module 'design_1_duty_module_0_0' (4#1) [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ip/design_1_duty_module_0_0/synth/design_1_duty_module_0_0.vhd:65]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.137 ; gain = 98.492 ; free physical = 1879 ; free virtual = 3710
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.145 ; gain = 98.492 ; free physical = 2528 ; free virtual = 4804
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.137 ; gain = 98.492 ; free physical = 1880 ; free virtual = 3711
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.145 ; gain = 98.492 ; free physical = 2529 ; free virtual = 4805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1204.141 ; gain = 106.496 ; free physical = 1880 ; free virtual = 3711
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1204.148 ; gain = 106.496 ; free physical = 2529 ; free virtual = 4805
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'pr_state_reg' in module 'debounce'
 WARNING: [Synth 8-6014] Unused sequential element pr_state_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:39]
@@ -55,9 +56,10 @@ INFO: [Synth 8-5544] ROM "nx_state" won't be mapped to Block RAM because address
 INFO: [Synth 8-5544] ROM "nx_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Device 21-403] Loading part xc7z010clg225-1
 WARNING: [Synth 8-6014] Unused sequential element timer_reg_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:37]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:83]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:84]
 INFO: [Synth 8-5546] ROM "duty_counter" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element timer_reg_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+INFO: [Synth 8-5546] ROM "duty_counter" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element timer_reg_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:59]
 WARNING: [Synth 8-6014] Unused sequential element pr_state_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:39]
 WARNING: [Synth 8-6014] Unused sequential element pr_state_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:39]
 ---------------------------------------------------------------------------------------------------
@@ -71,10 +73,10 @@ WARNING: [Synth 8-6014] Unused sequential element pr_state_reg was removed.  [/h
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'pr_state_reg' using encoding 'sequential' in module 'debounce'
 WARNING: [Synth 8-6014] Unused sequential element pr_state_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:39]
-WARNING: [Synth 8-327] inferring latch for variable 'duty_counter_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:95]
-WARNING: [Synth 8-327] inferring latch for variable 'nx_state_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'duty_counter_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:96]
+WARNING: [Synth 8-327] inferring latch for variable 'nx_state_reg' [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1220.156 ; gain = 122.512 ; free physical = 1859 ; free virtual = 3690
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1220.164 ; gain = 122.512 ; free physical = 2510 ; free virtual = 4789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -101,9 +103,11 @@ Detailed RTL Component Info :
 	   3 Input      2 Bit        Muxes := 4     
 	   2 Input      2 Bit        Muxes := 6     
 	   5 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 7     
 	   5 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -134,8 +138,10 @@ Detailed RTL Component Info :
 	   4 Input      8 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 4     
 	   5 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 8     
-	   4 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -152,12 +158,11 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "U0/duty_machine1/duty_counter" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element U0/debounce_btn1/timer_reg_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:37]
 WARNING: [Synth 8-6014] Unused sequential element U0/debounce_btn2/timer_reg_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/imports/Lab2_info/debounce.vhd:37]
-WARNING: [Synth 8-6014] Unused sequential element U0/duty_machine1/timer_reg_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:58]
+WARNING: [Synth 8-6014] Unused sequential element U0/duty_machine1/timer_reg_reg was removed.  [/home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/new/duty_machine.vhd:59]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1325.508 ; gain = 227.863 ; free physical = 1734 ; free virtual = 3559
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1325.516 ; gain = 227.863 ; free physical = 2365 ; free virtual = 4656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -170,7 +175,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1325.508 ; gain = 227.863 ; free physical = 1734 ; free virtual = 3560
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1325.516 ; gain = 227.863 ; free physical = 2365 ; free virtual = 4656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,7 +187,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1326.516 ; gain = 228.871 ; free physical = 1733 ; free virtual = 3558
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1327.531 ; gain = 229.879 ; free physical = 2363 ; free virtual = 4654
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -206,7 +211,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.516 ; gain = 228.871 ; free physical = 1734 ; free virtual = 3560
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1327.531 ; gain = 229.879 ; free physical = 2363 ; free virtual = 4654
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -219,7 +224,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.516 ; gain = 228.871 ; free physical = 1734 ; free virtual = 3560
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1327.531 ; gain = 229.879 ; free physical = 2363 ; free virtual = 4654
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -231,25 +236,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.516 ; gain = 228.871 ; free physical = 1734 ; free virtual = 3560
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1327.531 ; gain = 229.879 ; free physical = 2363 ; free virtual = 4654
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.516 ; gain = 228.871 ; free physical = 1734 ; free virtual = 3560
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1327.531 ; gain = 229.879 ; free physical = 2363 ; free virtual = 4654
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.516 ; gain = 228.871 ; free physical = 1734 ; free virtual = 3560
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1327.531 ; gain = 229.879 ; free physical = 2363 ; free virtual = 4654
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.516 ; gain = 228.871 ; free physical = 1734 ; free virtual = 3560
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1327.531 ; gain = 229.879 ; free physical = 2363 ; free virtual = 4654
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -267,11 +272,11 @@ Report Cell Usage:
 +------+-------+------+
 |1     |CARRY4 |    26|
 |2     |LUT1   |    25|
-|3     |LUT2   |    51|
-|4     |LUT3   |     8|
-|5     |LUT4   |    14|
-|6     |LUT5   |    10|
-|7     |LUT6   |    62|
+|3     |LUT2   |    44|
+|4     |LUT3   |    11|
+|5     |LUT4   |    13|
+|6     |LUT5   |    15|
+|7     |LUT6   |    59|
 |8     |FDRE   |    80|
 |9     |LD     |    10|
 +------+-------+------+
@@ -280,18 +285,18 @@ Report Instance Areas:
 +------+------------------+-------------+------+
 |      |Instance          |Module       |Cells |
 +------+------------------+-------------+------+
-|1     |top               |             |   286|
-|2     |  U0              |duty_module  |   286|
-|3     |    debounce_btn1 |debounce     |    93|
-|4     |    debounce_btn2 |debounce_0   |    93|
-|5     |    duty_machine1 |duty_machine |   100|
+|1     |top               |             |   283|
+|2     |  U0              |duty_module  |   283|
+|3     |    debounce_btn1 |debounce     |    89|
+|4     |    debounce_btn2 |debounce_0   |    91|
+|5     |    duty_machine1 |duty_machine |   103|
 +------+------------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.516 ; gain = 228.871 ; free physical = 1734 ; free virtual = 3560
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1327.531 ; gain = 229.879 ; free physical = 2363 ; free virtual = 4654
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.516 ; gain = 228.871 ; free physical = 1736 ; free virtual = 3562
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.523 ; gain = 228.871 ; free physical = 1736 ; free virtual = 3562
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1327.531 ; gain = 229.879 ; free physical = 2365 ; free virtual = 4657
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1327.539 ; gain = 229.879 ; free physical = 2365 ; free virtual = 4657
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -301,13 +306,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10 instances were transformed.
   LD => LDCE: 10 instances
 
-30 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+30 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1428.527 ; gain = 343.465 ; free physical = 1681 ; free virtual = 3506
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1428.543 ; gain = 343.473 ; free physical = 2292 ; free virtual = 4598
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Common 17-1381] The checkpoint '/home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_duty_module_0_0_synth_1/design_1_duty_module_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1904.047 ; gain = 475.520 ; free physical = 1308 ; free virtual = 3134
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1905.062 ; gain = 476.520 ; free physical = 1928 ; free virtual = 4250
 INFO: [Coretcl 2-1174] Renamed 4 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/frederik/Documents/Rob_Electronics/lab3/lab3.runs/design_1_duty_module_0_0_synth_1/design_1_duty_module_0_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1905.047 ; gain = 0.000 ; free physical = 1305 ; free virtual = 3130
-INFO: [Common 17-206] Exiting Vivado at Wed Nov  1 11:40:27 2017...
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1906.062 ; gain = 0.000 ; free physical = 1923 ; free virtual = 4246
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  2 20:12:48 2017...

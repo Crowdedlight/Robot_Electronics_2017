@@ -99,13 +99,13 @@ begin
             W_inh <= '1';
             W_in <= '1';
         end if;
-        else 
-            U_inh <= '0';
-            U_in <= '0';
-            V_inh <= '0';
-            V_in <= '0';
-            W_inh <= '0';
-            W_in <= '0';
+    --else 
+        --U_inh <= '0';
+        --U_in <= '0';
+        --V_inh <= '0';
+        --V_in <= '0';
+        --W_inh <= '0';
+        --W_in <= '0';
     end if;    
 
 end process;

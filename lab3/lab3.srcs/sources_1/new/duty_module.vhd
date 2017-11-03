@@ -55,7 +55,7 @@ component duty_machine is
        duty_cycle : out STD_LOGIC_VECTOR (7 downto 0));
 end component;
 
-signal delay_value : STD_LOGIC_VECTOR(23 downto 0) := x"000010";
+signal delay_value : STD_LOGIC_VECTOR(23 downto 0) := x"3D0900"; --4milion delay
 signal btn1_signal : STD_LOGIC;
 signal btn2_signal : STD_LOGIC;
 

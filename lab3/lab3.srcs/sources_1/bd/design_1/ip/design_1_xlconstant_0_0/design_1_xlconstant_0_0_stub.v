@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-// Date        : Wed Nov  1 12:04:09 2017
+// Date        : Wed Nov  1 12:04:08 2017
 // Host        : mazur-W55xEU running 64-bit Ubuntu 16.04.3 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/frederik/Documents/Rob_Electronics/lab3/lab3.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_xlconstant_0_0 -prefix
+//               design_1_xlconstant_0_0_ design_1_xlconstant_0_0_stub.v
 // Design      : design_1_xlconstant_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg225-1

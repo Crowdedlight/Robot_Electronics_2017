@@ -55,9 +55,9 @@ USE ieee.numeric_std.ALL;
 
 ENTITY design_1_spi_master_0_0 IS
   PORT (
-    clk : IN STD_LOGIC;
+    clk_200M_in : IN STD_LOGIC;
     data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    spi_clk : OUT STD_LOGIC;
+    spi_clk_out : OUT STD_LOGIC;
     mosi : OUT STD_LOGIC
   );
 END design_1_spi_master_0_0;
@@ -67,9 +67,9 @@ ARCHITECTURE design_1_spi_master_0_0_arch OF design_1_spi_master_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_spi_master_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT spi_master IS
     PORT (
-      clk : IN STD_LOGIC;
+      clk_200M_in : IN STD_LOGIC;
       data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      spi_clk : OUT STD_LOGIC;
+      spi_clk_out : OUT STD_LOGIC;
       mosi : OUT STD_LOGIC
     );
   END COMPONENT spi_master;
@@ -77,15 +77,12 @@ ARCHITECTURE design_1_spi_master_0_0_arch OF design_1_spi_master_0_0 IS
   ATTRIBUTE X_CORE_INFO OF design_1_spi_master_0_0_arch: ARCHITECTURE IS "spi_master,Vivado 2017.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_spi_master_0_0_arch : ARCHITECTURE IS "design_1_spi_master_0_0,spi_master,{}";
-  ATTRIBUTE X_INTERFACE_INFO : STRING;
-  ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
-  ATTRIBUTE X_INTERFACE_INFO OF spi_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 spi_clk CLK";
 BEGIN
   U0 : spi_master
     PORT MAP (
-      clk => clk,
+      clk_200M_in => clk_200M_in,
       data => data,
-      spi_clk => spi_clk,
+      spi_clk_out => spi_clk_out,
       mosi => mosi
     );
 END design_1_spi_master_0_0_arch;

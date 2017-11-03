@@ -1,8 +1,8 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-// Date        : Tue Oct 31 14:39:08 2017
-// Host        : mazur-W55xEU running 64-bit unknown
+// Date        : Thu Nov  2 20:14:38 2017
+// Host        : mazur-W55xEU running 64-bit Ubuntu 16.04.3 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_blcd_driver_0_0_sim_netlist.v
 // Design      : design_1_blcd_driver_0_0
@@ -30,183 +30,125 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blcd_driver
   input [2:0]hall_in;
   input pwm;
 
-  wire \/i___0_n_0 ;
   wire U_in;
-  wire U_in16_out;
   wire U_in_reg_i_1_n_0;
-  wire U_in_reg_i_2_n_0;
   wire U_inh;
-  wire U_inh020_out;
   wire U_inh14_out;
-  wire U_inh9_out;
-  wire U_inh_reg_i_2_n_0;
+  wire U_inh_reg_i_1_n_0;
   wire V_in;
-  wire V_in6_out;
   wire V_in8_out;
-  wire V_in_reg_i_2_n_0;
   wire V_inh;
-  wire V_inh2_out;
+  wire V_inh_reg_i_1_n_0;
   wire W_in;
-  wire W_in_reg_i_2_n_0;
+  wire W_in_reg_i_1_n_0;
   wire W_inh;
+  wire \W_inh_inferred__0/i__n_0 ;
   wire [2:0]hall_in;
   wire pwm;
 
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
-    .INIT(16'h2028)) 
-    \/i_ 
-       (.I0(pwm),
-        .I1(hall_in[2]),
-        .I2(hall_in[0]),
-        .I3(hall_in[1]),
-        .O(V_inh2_out));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'h08)) 
-    \/i___0 
-       (.I0(pwm),
-        .I1(hall_in[0]),
-        .I2(hall_in[1]),
-        .O(\/i___0_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     U_in_reg
-       (.CLR(U_in16_out),
+       (.CLR(1'b0),
         .D(U_in_reg_i_1_n_0),
-        .G(U_in_reg_i_2_n_0),
+        .G(U_inh14_out),
         .GE(1'b1),
         .Q(U_in));
-  LUT3 #(
-    .INIT(8'h08)) 
+  LUT2 #(
+    .INIT(4'h4)) 
     U_in_reg_i_1
-       (.I0(pwm),
+       (.I0(hall_in[1]),
         .I1(hall_in[2]),
-        .I2(hall_in[1]),
         .O(U_in_reg_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h2F)) 
-    U_in_reg_i_2
-       (.I0(hall_in[2]),
-        .I1(hall_in[1]),
-        .I2(pwm),
-        .O(U_in_reg_i_2_n_0));
-  LUT4 #(
-    .INIT(16'h08A8)) 
-    U_in_reg_i_3
-       (.I0(pwm),
-        .I1(hall_in[1]),
-        .I2(hall_in[0]),
-        .I3(hall_in[2]),
-        .O(U_in16_out));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    U_inh_reg
-       (.CLR(U_inh14_out),
-        .D(U_inh9_out),
-        .G(U_inh_reg_i_2_n_0),
-        .GE(1'b1),
-        .Q(U_inh));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h28)) 
-    U_inh_reg_i_1
-       (.I0(pwm),
-        .I1(hall_in[1]),
-        .I2(hall_in[2]),
-        .O(U_inh9_out));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
-    .INIT(16'h5EFF)) 
-    U_inh_reg_i_2
+    .INIT(16'h7E00)) 
+    U_in_reg_i_2
        (.I0(hall_in[1]),
         .I1(hall_in[0]),
         .I2(hall_in[2]),
         .I3(pwm),
-        .O(U_inh_reg_i_2_n_0));
-  LUT4 #(
-    .INIT(16'h0080)) 
-    U_inh_reg_i_3
-       (.I0(pwm),
-        .I1(hall_in[2]),
-        .I2(hall_in[1]),
-        .I3(hall_in[0]),
         .O(U_inh14_out));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    U_inh_reg
+       (.CLR(1'b0),
+        .D(U_inh_reg_i_1_n_0),
+        .G(U_inh14_out),
+        .GE(1'b1),
+        .Q(U_inh));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    U_inh_reg_i_1
+       (.I0(hall_in[1]),
+        .I1(hall_in[2]),
+        .O(U_inh_reg_i_1_n_0));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     V_in_reg
-       (.CLR(V_in8_out),
-        .D(V_in6_out),
-        .G(V_in_reg_i_2_n_0),
+       (.CLR(1'b0),
+        .D(V_in8_out),
+        .G(U_inh14_out),
         .GE(1'b1),
         .Q(V_in));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h08)) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
     V_in_reg_i_1
-       (.I0(pwm),
-        .I1(hall_in[0]),
-        .I2(hall_in[2]),
-        .O(V_in6_out));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'h4EFF)) 
-    V_in_reg_i_2
-       (.I0(hall_in[2]),
-        .I1(hall_in[0]),
-        .I2(hall_in[1]),
-        .I3(pwm),
-        .O(V_in_reg_i_2_n_0));
-  LUT3 #(
-    .INIT(8'h20)) 
-    V_in_reg_i_3
-       (.I0(pwm),
-        .I1(hall_in[0]),
-        .I2(hall_in[1]),
+       (.I0(hall_in[0]),
+        .I1(hall_in[2]),
         .O(V_in8_out));
-  (* XILINX_LEGACY_PRIM = "LDP" *) 
-  LDPE #(
-    .INIT(1'b1)) 
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
     V_inh_reg
-       (.D(V_inh2_out),
-        .G(U_inh_reg_i_2_n_0),
+       (.CLR(1'b0),
+        .D(V_inh_reg_i_1_n_0),
+        .G(U_inh14_out),
         .GE(1'b1),
-        .PRE(U_inh14_out),
         .Q(V_inh));
-  LDCP W_in_reg
-       (.CLR(W_in_reg_i_2_n_0),
-        .D(1'b0),
-        .G(U_inh020_out),
-        .PRE(V_in8_out),
-        .Q(W_in));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'h02)) 
-    W_in_reg_i_1
-       (.I0(hall_in[2]),
-        .I1(hall_in[0]),
-        .I2(hall_in[1]),
-        .O(U_inh020_out));
-  LUT4 #(
-    .INIT(16'h70FF)) 
-    W_in_reg_i_2
-       (.I0(hall_in[2]),
-        .I1(hall_in[1]),
-        .I2(hall_in[0]),
-        .I3(pwm),
-        .O(W_in_reg_i_2_n_0));
-  (* XILINX_LEGACY_PRIM = "LDP" *) 
-  LDPE #(
-    .INIT(1'b1)) 
-    W_inh_reg
-       (.D(\/i___0_n_0 ),
-        .G(V_in_reg_i_2_n_0),
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    V_inh_reg_i_1
+       (.I0(hall_in[0]),
+        .I1(hall_in[2]),
+        .O(V_inh_reg_i_1_n_0));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    W_in_reg
+       (.CLR(1'b0),
+        .D(W_in_reg_i_1_n_0),
+        .G(U_inh14_out),
         .GE(1'b1),
-        .PRE(V_in8_out),
+        .Q(W_in));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT2 #(
+    .INIT(4'h4)) 
+    W_in_reg_i_1
+       (.I0(hall_in[0]),
+        .I1(hall_in[1]),
+        .O(W_in_reg_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \W_inh_inferred__0/i_ 
+       (.I0(hall_in[1]),
+        .I1(hall_in[0]),
+        .O(\W_inh_inferred__0/i__n_0 ));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    W_inh_reg
+       (.CLR(1'b0),
+        .D(\W_inh_inferred__0/i__n_0 ),
+        .G(U_inh14_out),
+        .GE(1'b1),
         .Q(W_inh));
 endmodule
 
