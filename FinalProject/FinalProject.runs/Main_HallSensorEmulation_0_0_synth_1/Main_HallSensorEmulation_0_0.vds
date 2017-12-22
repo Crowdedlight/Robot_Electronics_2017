@@ -1,0 +1,368 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Dec 20 17:41:58 2017
+# Process ID: 8320
+# Current directory: /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_HallSensorEmulation_0_0_synth_1
+# Command line: vivado -log Main_HallSensorEmulation_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main_HallSensorEmulation_0_0.tcl
+# Log file: /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_HallSensorEmulation_0_0_synth_1/Main_HallSensorEmulation_0_0.vds
+# Journal file: /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_HallSensorEmulation_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source Main_HallSensorEmulation_0_0.tcl -notrace
+Command: synth_design -top Main_HallSensorEmulation_0_0 -part xc7z010clg225-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg225'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg225'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8603 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1155.637 ; gain = 57.992 ; free physical = 360 ; free virtual = 2346
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Main_HallSensorEmulation_0_0' [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/bd/Main/ip/Main_HallSensorEmulation_0_0/synth/Main_HallSensorEmulation_0_0.vhd:64]
+INFO: [Synth 8-3491] module 'HallSensorEmulation' declared at '/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:35' bound to instance 'U0' of component 'HallSensorEmulation' [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/bd/Main/ip/Main_HallSensorEmulation_0_0/synth/Main_HallSensorEmulation_0_0.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'HallSensorEmulation' [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:43]
+WARNING: [Synth 8-614] signal 'countera' is read in the process but is not in the sensitivity list [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:55]
+WARNING: [Synth 8-614] signal 'delaya' is read in the process but is not in the sensitivity list [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:55]
+WARNING: [Synth 8-614] signal 'counterb' is read in the process but is not in the sensitivity list [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:55]
+WARNING: [Synth 8-614] signal 'delayb' is read in the process but is not in the sensitivity list [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:55]
+WARNING: [Synth 8-614] signal 'counterc' is read in the process but is not in the sensitivity list [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:55]
+WARNING: [Synth 8-614] signal 'delayc' is read in the process but is not in the sensitivity list [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:55]
+WARNING: [Synth 8-6014] Unused sequential element countera_reg was removed.  [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element counterb_reg was removed.  [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element counterc_reg was removed.  [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element countera_reg was removed.  [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element delaya_reg was removed.  [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:69]
+WARNING: [Synth 8-6014] Unused sequential element counterb_reg was removed.  [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element delayb_reg was removed.  [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:91]
+WARNING: [Synth 8-6014] Unused sequential element counterc_reg was removed.  [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element delayc_reg was removed.  [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'HallSensorEmulation' (1#1) [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'Main_HallSensorEmulation_0_0' (2#1) [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/bd/Main/ip/Main_HallSensorEmulation_0_0/synth/Main_HallSensorEmulation_0_0.vhd:64]
+WARNING: [Synth 8-3331] design HallSensorEmulation has unconnected port clk_200M_in
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.137 ; gain = 98.492 ; free physical = 373 ; free virtual = 2359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.137 ; gain = 98.492 ; free physical = 372 ; free virtual = 2358
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1204.141 ; gain = 106.496 ; free physical = 372 ; free virtual = 2358
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'hall_out_reg' [/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/imports/Downloads/HallSensorEmulation.vhd:72]
+INFO: [Device 21-403] Loading part xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1212.148 ; gain = 114.504 ; free physical = 366 ; free virtual = 2352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module HallSensorEmulation 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design Main_HallSensorEmulation_0_0 has unconnected port clk_200M_in
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[0]' (FD_1) to 'U0/countera_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[1]' (FD_1) to 'U0/countera_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[2]' (FD_1) to 'U0/countera_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[3]' (FD_1) to 'U0/countera_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[4]' (FD_1) to 'U0/countera_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[5]' (FD_1) to 'U0/countera_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[6]' (FD_1) to 'U0/countera_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[7]' (FD_1) to 'U0/countera_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[8]' (FD_1) to 'U0/countera_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[9]' (FD_1) to 'U0/countera_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[10]' (FD_1) to 'U0/countera_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[11]' (FD_1) to 'U0/countera_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[12]' (FD_1) to 'U0/countera_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[13]' (FD_1) to 'U0/countera_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[14]' (FD_1) to 'U0/countera_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[15]' (FD_1) to 'U0/countera_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[16]' (FD_1) to 'U0/countera_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[17]' (FD_1) to 'U0/countera_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[18]' (FD_1) to 'U0/countera_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[19]' (FD_1) to 'U0/countera_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[20]' (FD_1) to 'U0/countera_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[21]' (FD_1) to 'U0/countera_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[22]' (FD_1) to 'U0/countera_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[23]' (FD_1) to 'U0/countera_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[24]' (FD_1) to 'U0/countera_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[25]' (FD_1) to 'U0/countera_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[26]' (FD_1) to 'U0/countera_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[27]' (FD_1) to 'U0/countera_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[28]' (FD_1) to 'U0/countera_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[29]' (FD_1) to 'U0/countera_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/countera_reg[30]' (FD_1) to 'U0/countera_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/countera_reg[31] )
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[0]' (FD_1) to 'U0/counterb_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[1]' (FD_1) to 'U0/counterb_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[2]' (FD_1) to 'U0/counterb_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[3]' (FD_1) to 'U0/counterb_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[4]' (FD_1) to 'U0/counterb_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[5]' (FD_1) to 'U0/counterb_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[6]' (FD_1) to 'U0/counterb_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[7]' (FD_1) to 'U0/counterb_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[8]' (FD_1) to 'U0/counterb_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[9]' (FD_1) to 'U0/counterb_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[10]' (FD_1) to 'U0/counterb_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[11]' (FD_1) to 'U0/counterb_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[12]' (FD_1) to 'U0/counterb_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[13]' (FD_1) to 'U0/counterb_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[14]' (FD_1) to 'U0/counterb_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[15]' (FD_1) to 'U0/counterb_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[16]' (FD_1) to 'U0/counterb_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[17]' (FD_1) to 'U0/counterb_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[18]' (FD_1) to 'U0/counterb_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[19]' (FD_1) to 'U0/counterb_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[20]' (FD_1) to 'U0/counterb_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[21]' (FD_1) to 'U0/counterb_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[22]' (FD_1) to 'U0/counterb_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[23]' (FD_1) to 'U0/counterb_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[24]' (FD_1) to 'U0/counterb_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[25]' (FD_1) to 'U0/counterb_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[26]' (FD_1) to 'U0/counterb_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[27]' (FD_1) to 'U0/counterb_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[28]' (FD_1) to 'U0/counterb_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[29]' (FD_1) to 'U0/counterb_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/counterb_reg[30]' (FD_1) to 'U0/counterb_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/counterb_reg[31] )
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[0]' (FD_1) to 'U0/counterc_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[1]' (FD_1) to 'U0/counterc_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[2]' (FD_1) to 'U0/counterc_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[3]' (FD_1) to 'U0/counterc_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[4]' (FD_1) to 'U0/counterc_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[5]' (FD_1) to 'U0/counterc_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[6]' (FD_1) to 'U0/counterc_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[7]' (FD_1) to 'U0/counterc_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[8]' (FD_1) to 'U0/counterc_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[9]' (FD_1) to 'U0/counterc_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[10]' (FD_1) to 'U0/counterc_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[11]' (FD_1) to 'U0/counterc_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[12]' (FD_1) to 'U0/counterc_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[13]' (FD_1) to 'U0/counterc_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[14]' (FD_1) to 'U0/counterc_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[15]' (FD_1) to 'U0/counterc_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[16]' (FD_1) to 'U0/counterc_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[17]' (FD_1) to 'U0/counterc_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[18]' (FD_1) to 'U0/counterc_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[19]' (FD_1) to 'U0/counterc_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[20]' (FD_1) to 'U0/counterc_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[21]' (FD_1) to 'U0/counterc_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[22]' (FD_1) to 'U0/counterc_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[23]' (FD_1) to 'U0/counterc_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[24]' (FD_1) to 'U0/counterc_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[25]' (FD_1) to 'U0/counterc_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[26]' (FD_1) to 'U0/counterc_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[27]' (FD_1) to 'U0/counterc_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[28]' (FD_1) to 'U0/counterc_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[29]' (FD_1) to 'U0/counterc_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/counterc_reg[30]' (FD_1) to 'U0/counterc_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/counterc_reg[31] )
+INFO: [Synth 8-3886] merging instance 'U0/delaya_reg[2]' (FD) to 'U0/delaya_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/delaya_reg[3]' (FD) to 'U0/delaya_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/delaya_reg[4]' (FD) to 'U0/delaya_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/delaya_reg[5]' (FD) to 'U0/delaya_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/delaya_reg[6]' (FD) to 'U0/delaya_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/delaya_reg[7]' (FD) to 'U0/delaya_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/delaya_reg[8]' (FD) to 'U0/delaya_reg[9]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/delaya_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/delayb_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/delayc_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/hall_out_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/hall_out_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/hall_out_reg[2] )
+INFO: [Synth 8-3332] Sequential element (U0/hall_out_reg[2]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/hall_out_reg[1]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/hall_out_reg[0]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/countera_reg[31]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/counterb_reg[31]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/counterc_reg[31]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delaya_reg[31]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delaya_reg[1]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delaya_reg[0]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delayb_reg[31]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delayb_reg[1]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delayb_reg[0]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delayc_reg[31]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delayc_reg[1]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delayc_reg[0]) is unused and will be removed from module Main_HallSensorEmulation_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1299.711 ; gain = 202.066 ; free physical = 258 ; free virtual = 2220
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1299.711 ; gain = 202.066 ; free physical = 257 ; free virtual = 2219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1307.719 ; gain = 210.074 ; free physical = 268 ; free virtual = 2219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1307.719 ; gain = 210.074 ; free physical = 268 ; free virtual = 2219
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1307.719 ; gain = 210.074 ; free physical = 268 ; free virtual = 2219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1307.719 ; gain = 210.074 ; free physical = 268 ; free virtual = 2219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1307.719 ; gain = 210.074 ; free physical = 268 ; free virtual = 2219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1307.719 ; gain = 210.074 ; free physical = 268 ; free virtual = 2219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1307.719 ; gain = 210.074 ; free physical = 268 ; free virtual = 2219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1307.719 ; gain = 210.074 ; free physical = 268 ; free virtual = 2219
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1307.719 ; gain = 210.074 ; free physical = 268 ; free virtual = 2219
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1307.727 ; gain = 210.074 ; free physical = 268 ; free virtual = 2219
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+136 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1399.727 ; gain = 314.664 ; free physical = 268 ; free virtual = 2201
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_HallSensorEmulation_0_0_synth_1/Main_HallSensorEmulation_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1797.246 ; gain = 397.520 ; free physical = 146 ; free virtual = 1646
+INFO: [Common 17-1381] The checkpoint '/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_HallSensorEmulation_0_0_synth_1/Main_HallSensorEmulation_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1797.246 ; gain = 0.000 ; free physical = 144 ; free virtual = 1645
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 20 17:42:36 2017...

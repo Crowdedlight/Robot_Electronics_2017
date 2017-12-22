@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Dec 21 10:23:21 2017
+# Process ID: 9688
+# Current directory: /home/frederik/Documents/Rob_Electronics/Unity
+# Command line: vivado
+# Log file: /home/frederik/Documents/Rob_Electronics/Unity/vivado.log
+# Journal file: /home/frederik/Documents/Rob_Electronics/Unity/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.xpr
+update_compile_order -fileset sources_1
+close [ open /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/new/bldc_starter.vhd w ]
+add_files /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/new/bldc_starter.vhd
+update_compile_order -fileset sources_1
+open_bd_design {/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/bd/Main/Main.bd}
+update_module_reference Main_blcd_driver_0_0
+update_module_reference Main_blcd_driver_0_0
+update_module_reference Main_blcd_driver_0_0
+update_module_reference Main_blcd_driver_0_0
+create_bd_cell -type module -reference bldc_starter bldc_starter_0
+set_property location {3 1472 458} [get_bd_cells bldc_starter_0]
+set_property location {2 1169 439} [get_bd_cells bldc_starter_0]
+set_property location {2 1289 434} [get_bd_cells bldc_starter_0]
+set_property location {2.5 1379 448} [get_bd_cells bldc_starter_0]
+set_property location {2 1137 426} [get_bd_cells bldc_starter_0]
+set_property location {2.5 1414 244} [get_bd_cells blcd_driver_0]
+set_property location {1668 366} [get_bd_ports A_in]
+set_property location {1905 238} [get_bd_ports A_in]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins bldc_starter_0/clk_200M_in]
+connect_bd_net [get_bd_pins pwm_0/pwm_out] [get_bd_pins bldc_starter_0/pwm]
+connect_bd_net [get_bd_pins HallSensorEmulation_0/hall_out] [get_bd_pins bldc_starter_0/hall_in]
+connect_bd_net [get_bd_pins bldc_starter_0/flag] [get_bd_pins blcd_driver_0/flag]
+startgroup
+make_bd_pins_external  [get_bd_pins bldc_starter_0/A_in]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins bldc_starter_0/A_inh]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins bldc_starter_0/B_in]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins bldc_starter_0/B_inh]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins bldc_starter_0/C_in]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins bldc_starter_0/C_inh]
+endgroup
+reset_run Main_xlconstant_0_0_synth_1
+launch_runs Main_xlconstant_0_0_synth_1
+wait_on_run Main_xlconstant_0_0_synth_1
+generate_target all [get_files /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/bd/Main/Main.bd]
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/bd/Main/Main.bd]
+launch_runs Main_blcd_driver_0_0_synth_1
+wait_on_run Main_blcd_driver_0_0_synth_1
+launch_runs Main_bldc_starter_0_0_synth_1
+wait_on_run Main_bldc_starter_0_0_synth_1
+synth_design -rtl -name rtl_1
+update_compile_order -fileset sources_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list A_in_1]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list A_inh_1]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list B_in_1]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list B_inh_1]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list C_in_1]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list C_inh_1]]
+open_bd_design {/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.srcs/sources_1/bd/Main/Main.bd}
+save_bd_design
+launch_sdk -workspace /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.sdk -hwspec /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.sdk/Main_wrapper.hdf
+launch_sdk -workspace /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.sdk -hwspec /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.sdk/Main_wrapper.hdf
+launch_sdk -workspace /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.sdk -hwspec /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.sdk/Main_wrapper.hdf
+save_constraints -force

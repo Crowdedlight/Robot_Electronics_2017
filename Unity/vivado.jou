@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Dec 21 11:14:18 2017
+# Process ID: 16271
+# Current directory: /home/frederik/Documents/Rob_Electronics/Unity
+# Command line: vivado
+# Log file: /home/frederik/Documents/Rob_Electronics/Unity/vivado.log
+# Journal file: /home/frederik/Documents/Rob_Electronics/Unity/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.xpr
+launch_sdk -workspace /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.sdk -hwspec /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.sdk/Main_wrapper.hdf
+update_compile_order -fileset sources_1

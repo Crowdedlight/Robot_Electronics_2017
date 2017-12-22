@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="Main_blcd_driver_0_0_synth_1" LaunchDir="/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_blcd_driver_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Main_unity_ctrl_0_0_synth_1" LaunchDir="/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_unity_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Main_bldc_starter_0_0_synth_1" LaunchDir="/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_bldc_starter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Main_debounce_0_0_synth_1" LaunchDir="/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_debounce_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Main_xlconstant_1_0_synth_1" LaunchDir="/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_xlconstant_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="Main_blcd_driver_0_0_synth_1"/>
+		<Parent Id="Main_unity_ctrl_0_0_synth_1"/>
+		<Parent Id="Main_bldc_starter_0_0_synth_1"/>
+		<Parent Id="Main_debounce_0_0_synth_1"/>
+		<Parent Id="Main_xlconstant_1_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="Main_blcd_driver_0_0_synth_1"/>
+		<Parent Id="Main_unity_ctrl_0_0_synth_1"/>
+		<Parent Id="Main_bldc_starter_0_0_synth_1"/>
+		<Parent Id="Main_debounce_0_0_synth_1"/>
+		<Parent Id="Main_xlconstant_1_0_synth_1"/>
+	</Run>
+</Runs>
+

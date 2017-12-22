@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Sun Oct  8 16:29:51 2017">
+<application name="pa" timeStamp="Wed Dec 20 17:38:49 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="8c710556e29742dbb00b1f86a22db285" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -47,7 +47,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="BaseDialog_OK" value="18" type="GuiResourceData"/>
 <property name="BaseDialog_YES" value="1" type="GuiResourceData"/>
 <property name="CmdMsgDialog_MESSAGES" value="6" type="GuiResourceData"/>
-<property name="CmdMsgDialog_OK" value="6" type="GuiResourceData"/>
+<property name="CmdMsgDialog_OK" value="7" type="GuiResourceData"/>
 <property name="CmdMsgDialog_OPEN_MESSAGES_VIEW" value="3" type="GuiResourceData"/>
 <property name="CreateNewDiagramDialog_DESIGN_NAME" value="1" type="GuiResourceData"/>
 <property name="CreateSrcFileDialog_FILE_NAME" value="1" type="GuiResourceData"/>
@@ -62,7 +62,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="HExceptionDialog_EXIT" value="1" type="GuiResourceData"/>
 <property name="HInputHandler_TOGGLE_LINE_COMMENTS" value="6" type="GuiResourceData"/>
 <property name="HJFileChooserHelpers_REFRESH_FOLDER_VIEW_TO_REFLECT_EXTERNAL" value="7" type="GuiResourceData"/>
-<property name="MainMenuMgr_FILE" value="2" type="GuiResourceData"/>
+<property name="MainMenuMgr_FILE" value="4" type="GuiResourceData"/>
+<property name="MainMenuMgr_OPEN_RECENT_PROJECT" value="3" type="GuiResourceData"/>
 <property name="MsgTreePanel_MESSAGE_VIEW_TREE" value="17" type="GuiResourceData"/>
 <property name="PACommandNames_ADD_MODULE_TO_BD" value="2" type="GuiResourceData"/>
 <property name="PACommandNames_ADD_SOURCES" value="4" type="GuiResourceData"/>
@@ -116,9 +117,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="WaveformView_PREVIOUS_TRANSITION" value="127" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="12" type="GuiMode"/>
+<property name="GuiMode" value="25" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="11" type="TclMode"/>
+<property name="TclMode" value="19" type="TclMode"/>
 </item>
 </section>
 </application>

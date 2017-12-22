@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Dec 21 10:54:41 2017
+# Process ID: 14926
+# Current directory: /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_xlconstant_0_0_synth_1
+# Command line: vivado -log Main_xlconstant_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main_xlconstant_0_0.tcl
+# Log file: /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_xlconstant_0_0_synth_1/Main_xlconstant_0_0.vds
+# Journal file: /home/frederik/Documents/Rob_Electronics/FinalProject/FinalProject.runs/Main_xlconstant_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source Main_xlconstant_0_0.tcl -notrace
